@@ -1,0 +1,27 @@
+name: Release Build
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install deps
+        run: |
+          yarn install --frozen-lockfile || true
+      - name: Build
+        run: |
+          node package.js build
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: noobninja-artifacts
+          path: dist/

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張量解析測試</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .result-box {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid;
+        }
+        .success { border-color: #28a745; background-color: #d4edda; }
+        .error { border-color: #dc3545; background-color: #f8d7da; }
+        .info { border-color: #17a2b8; background-color: #d1ecf1; }
+        pre { background: #f8f9fa; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 張量解析功能測試</h1>
+        <div id="output">載入中...</div>
+    </div>
+
+    <script type="module">
+        // 測試改進的張量解析功能
+        import { ModelSummarizer } from './source/explain/summarizer.js';
+        
+        console.log('🔍 開始張量解析測試...');
+        
+        // 模擬真實 Netron 張量結構
+        const mockNetronTensor = {
+            name: 'input.1',
+            arguments: [
+                {
+                    type: {
+                        dataType: 'float32',
+                        shape: {
+                            dimensions: [1, 256, 256, 3]
+                        }
+                    }
+                }
+            ],
+            toString: () => 'float32[1,256,256,3]'
+        };
+        
+        const summarizer = new ModelSummarizer();
+        
+        // 測試解析
+        console.log('🔧 開始解析張量...');
+        const shape = summarizer._parseShape(mockNetronTensor);
+        const dtype = summarizer._parseDtype(mockNetronTensor);
+        
+        console.log('原始張量:', mockNetronTensor);
+        console.log('解析形狀:', shape);
+        console.log('解析類型:', dtype);
+        
+        // 驗證結果
+        const expectedShape = [1, 256, 256, 3];
+        const expectedDtype = 'float32';
+        const shapeMatch = JSON.stringify(shape) === JSON.stringify(expectedShape);
+        const dtypeMatch = dtype === expectedDtype;
+        
+        // 顯示結果
+        document.getElementById('output').innerHTML = `
+            <div class="result-box info">
+                <h3>📝 原始 Netron 張量結構:</h3>
+                <pre>${JSON.stringify(mockNetronTensor, null, 2)}</pre>
+            </div>
+            
+            <div class="result-box ${shapeMatch && dtypeMatch ? 'success' : 'error'}">
+                <h3>📊 解析結果:</h3>
+                <p><strong>解析形狀:</strong> ${JSON.stringify(shape)}</p>
+                <p><strong>解析資料類型:</strong> ${dtype}</p>
+            </div>
+            
+            <div class="result-box info">
+                <h3>🎯 期望結果:</h3>
+                <p><strong>期望形狀:</strong> ${JSON.stringify(expectedShape)}</p>
+                <p><strong>期望資料類型:</strong> ${expectedDtype}</p>
+            </div>
+            
+            <div class="result-box ${shapeMatch && dtypeMatch ? 'success' : 'error'}">
+                <h3>✅ 驗證結果:</h3>
+                <p><strong>形狀匹配:</strong> ${shapeMatch ? '✅ 通過' : '❌ 失敗'}</p>
+                <p><strong>類型匹配:</strong> ${dtypeMatch ? '✅ 通過' : '❌ 失敗'}</p>
+                <p><strong>整體評估:</strong> ${shapeMatch && dtypeMatch ? '🎉 完全成功' : '⚠️ 需要修正'}</p>
+            </div>
+            
+            <div class="result-box info">
+                <h3>🔍 調試資訊:</h3>
+                <p>請檢查瀏覽器控制台查看詳細的解析過程日誌</p>
+            </div>
+        `;
+        
+        console.log('✅ 測試完成');
+        console.log('形狀匹配:', shapeMatch);
+        console.log('類型匹配:', dtypeMatch);
+    </script>
+</body>
+</html>

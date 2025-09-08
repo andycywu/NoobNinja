@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoobNinja - 模型小白解碼器測試</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #2196F3;
+            background-color: #f8f9fa;
+        }
+        .test-button {
+            background: #2196F3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #1976D2;
+        }
+        .console-output {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+        .status.success { background: #d4edda; color: #155724; }
+        .status.error { background: #f8d7da; color: #721c24; }
+        .status.info { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>🔍 NoobNinja - 模型小白解碼器</h1>
+        
+        <div class="status info">
+            <strong>測試環境：</strong>獨立測試頁面，用於驗證模型小白解碼器功能
+        </div>
+
+        <div class="test-section">
+            <h2>📊 基礎功能測試</h2>
+            <p>測試模型摘要器、規則引擎等核心功能</p>
+            <button class="test-button" onclick="runBasicTests()">執行基礎測試</button>
+            <button class="test-button" onclick="testModelSummarizer()">測試模型摘要器</button>
+            <button class="test-button" onclick="testRulesEngine()">測試規則引擎</button>
+        </div>
+
+        <div class="test-section">
+            <h2>🤖 LLM 整合測試</h2>
+            <p>測試 LLM 提供者的可用性和配置</p>
+            <button class="test-button" onclick="testLLMProviders()">檢查 LLM 可用性</button>
+            <button class="test-button" onclick="testOllamaConnection()">測試 Ollama 連線</button>
+        </div>
+
+        <div class="test-section">
+            <h2>🏃‍♂️ Dummy Runner 測試</h2>
+            <p>測試模型執行環境支援</p>
+            <button class="test-button" onclick="testDummyRunnerSupport()">檢查支援性</button>
+            <button class="test-button" onclick="testONNXRuntimeWeb()">測試 ONNX Runtime Web</button>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 完整流程測試</h2>
+            <p>測試完整的 Explain 工作流程</p>
+            <button class="test-button" onclick="testCompleteWorkflow()">執行完整測試</button>
+            <button class="test-button" onclick="clearConsole()">清空控制台</button>
+        </div>
+
+        <h3>測試輸出</h3>
+        <div id="console" class="console-output"></div>
+
+        <div class="test-section">
+            <h2>📋 功能檢查表</h2>
+            <div id="checklist">
+                <div>⏳ 模組載入</div>
+                <div>⏳ 模型摘要器</div>
+                <div>⏳ 規則引擎</div>
+                <div>⏳ LLM 提供者</div>
+                <div>⏳ Dummy Runner</div>
+                <div>⏳ 匯出功能</div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        // 重寫 console.log 以顯示在頁面上
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+        
+        function appendToConsole(message, type = 'log') {
+            const consoleDiv = document.getElementById('console');
+            const timestamp = new Date().toLocaleTimeString();
+            const color = type === 'error' ? '#ff6b6b' : type === 'warn' ? '#ffa500' : '#d4d4d4';
+            
+            consoleDiv.innerHTML += `<div style="color: ${color}">[${timestamp}] ${message}</div>`;
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        }
+        
+        console.log = (...args) => {
+            originalLog(...args);
+            appendToConsole(args.join(' '), 'log');
+        };
+        
+        console.error = (...args) => {
+            originalError(...args);
+            appendToConsole('ERROR: ' + args.join(' '), 'error');
+        };
+        
+        console.warn = (...args) => {
+            originalWarn(...args);
+            appendToConsole('WARN: ' + args.join(' '), 'warn');
+        };
+        
+        // 更新檢查表
+        function updateChecklist(item, status) {
+            const checklist = document.getElementById('checklist');
+            const items = checklist.children;
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].textContent.includes(item)) {
+                    const icon = status === 'success' ? '✅' : status === 'error' ? '❌' : '⏳';
+                    items[i].innerHTML = `${icon} ${item}`;
+                    break;
+                }
+            }
+        }
+        
+        // 測試函數
+        window.clearConsole = () => {
+            document.getElementById('console').innerHTML = '';
+        };
+        
+        window.runBasicTests = async () => {
+            console.log('🚀 開始基礎功能測試...');
+            
+            try {
+                // 測試模組載入
+                console.log('📦 載入 Explain 模組...');
+                const { ExplainEngine } = await import('../index.js');
+                updateChecklist('模組載入', 'success');
+                
+                // 建立 ExplainEngine 實例
+                const explainEngine = new ExplainEngine();
+                console.log('✅ ExplainEngine 建立成功');
+                
+                // 測試統計資訊
+                const stats = explainEngine.getStats();
+                console.log('📊 引擎統計:', stats);
+                
+                window.explainEngine = explainEngine; // 存為全域變數供其他測試使用
+                
+            } catch (error) {
+                console.error('基礎功能測試失敗:', error);
+                updateChecklist('模組載入', 'error');
+            }
+        };
+        
+        window.testModelSummarizer = async () => {
+            console.log('🧪 測試模型摘要器...');
+            
+            try {
+                const { ModelSummarizer } = await import('../summarizer.js');
+                const summarizer = new ModelSummarizer();
+                
+                // 模擬模型數據
+                const mockModel = {
+                    format: 'ONNX',
+                    name: 'TestModel',
+                    graphs: [{
+                        inputs: [{
+                            name: 'input',
+                            type: { shape: { dimensions: [1, 3, 224, 224] }, dataType: 'float32' }
+                        }],
+                        outputs: [{
+                            name: 'output',
+                            type: { shape: { dimensions: [1, 1000] }, dataType: 'float32' }
+                        }],
+                        nodes: [{ type: 'Conv' }, { type: 'Softmax' }]
+                    }]
+                };
+                
+                const summary = summarizer.summarize(mockModel);
+                console.log('📋 模型摘要:', summary);
+                console.log('✅ 模型摘要器測試通過');
+                updateChecklist('模型摘要器', 'success');
+                
+            } catch (error) {
+                console.error('模型摘要器測試失敗:', error);
+                updateChecklist('模型摘要器', 'error');
+            }
+        };
+        
+        window.testRulesEngine = async () => {
+            console.log('🧪 測試規則引擎...');
+            
+            try {
+                const { RulesEngine } = await import('../rules.js');
+                const rulesEngine = new RulesEngine();
+                
+                // 使用模擬摘要
+                const mockSummary = {
+                    modelName: 'TestModel',
+                    format: 'onnx',
+                    taskGuess: 'classification',
+                    inputs: [{ name: 'input', shape: [1, 3, 224, 224], dtype: 'float32', domain: 'image' }],
+                    outputs: [{ name: 'output', shape: [1, 1000], dtype: 'float32', semantics: 'logits' }],
+                    quantization: { isQuantized: false, precision: 'fp32' }
+                };
+                
+                const explanation = rulesEngine.generateExplanation(mockSummary);
+                console.log('📝 規則解釋:', explanation);
+                console.log('✅ 規則引擎測試通過');
+                updateChecklist('規則引擎', 'success');
+                
+            } catch (error) {
+                console.error('規則引擎測試失敗:', error);
+                updateChecklist('規則引擎', 'error');
+            }
+        };
+        
+        window.testLLMProviders = async () => {
+            console.log('🧪 測試 LLM 提供者...');
+            
+            try {
+                const { LLMProviders } = await import('../llm-providers.js');
+                const llmProviders = new LLMProviders();
+                
+                const availableProviders = await llmProviders.getAvailableProviders();
+                console.log('🤖 可用的 LLM 提供者:', availableProviders);
+                
+                if (availableProviders.length > 0) {
+                    updateChecklist('LLM 提供者', 'success');
+                    console.log('✅ 至少有一個 LLM 提供者可用');
+                } else {
+                    updateChecklist('LLM 提供者', 'error');
+                    console.warn('⚠️ 沒有可用的 LLM 提供者');
+                }
+                
+            } catch (error) {
+                console.error('LLM 提供者測試失敗:', error);
+                updateChecklist('LLM 提供者', 'error');
+            }
+        };
+        
+        window.testOllamaConnection = async () => {
+            console.log('🧪 測試 Ollama 連線...');
+            
+            try {
+                const response = await fetch('http://localhost:11434/api/tags', {
+                    method: 'GET',
+                    signal: AbortSignal.timeout(3000)
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('✅ Ollama 連線成功, 可用模型:', data.models?.length || 0);
+                } else {
+                    console.warn('⚠️ Ollama 回應錯誤:', response.status);
+                }
+                
+            } catch (error) {
+                console.warn('⚠️ Ollama 連線失敗 (可能未啟動):', error.message);
+            }
+        };
+        
+        window.testDummyRunnerSupport = async () => {
+            console.log('🧪 測試 Dummy Runner 支援...');
+            
+            try {
+                const { DummyRunner } = await import('../dummy-run.js');
+                
+                const isSupported = DummyRunner.isSupported();
+                const supportedProviders = DummyRunner.getSupportedProviders();
+                
+                console.log('🏃‍♂️ Dummy Runner 支援:', isSupported);
+                console.log('📦 支援的執行提供者:', supportedProviders);
+                
+                if (isSupported) {
+                    updateChecklist('Dummy Runner', 'success');
+                } else {
+                    updateChecklist('Dummy Runner', 'error');
+                }
+                
+            } catch (error) {
+                console.error('Dummy Runner 測試失敗:', error);
+                updateChecklist('Dummy Runner', 'error');
+            }
+        };
+        
+        window.testONNXRuntimeWeb = async () => {
+            console.log('🧪 測試 ONNX Runtime Web...');
+            
+            try {
+                // 載入 ONNX Runtime Web
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.18.0/dist/ort.min.js';
+                document.head.appendChild(script);
+                
+                await new Promise((resolve, reject) => {
+                    script.onload = resolve;
+                    script.onerror = reject;
+                });
+                
+                if (window.ort) {
+                    console.log('✅ ONNX Runtime Web 載入成功');
+                    console.log('📊 版本:', window.ort.env.versions);
+                } else {
+                    console.error('❌ ONNX Runtime Web 載入失敗');
+                }
+                
+            } catch (error) {
+                console.error('ONNX Runtime Web 測試失敗:', error);
+            }
+        };
+        
+        window.testCompleteWorkflow = async () => {
+            console.log('🎯 開始完整流程測試...');
+            
+            try {
+                // 確保 ExplainEngine 已載入
+                if (!window.explainEngine) {
+                    await window.runBasicTests();
+                }
+                
+                const explainEngine = window.explainEngine;
+                
+                // 模擬完整的模型物件
+                const mockModel = {
+                    format: 'ONNX',
+                    name: 'ResNet50_Test',
+                    graphs: [{
+                        inputs: [{
+                            name: 'data',
+                            type: { 
+                                shape: { dimensions: [1, 3, 224, 224] }, 
+                                dataType: 'float32' 
+                            }
+                        }],
+                        outputs: [{
+                            name: 'prob',
+                            type: { 
+                                shape: { dimensions: [1, 1000] }, 
+                                dataType: 'float32' 
+                            }
+                        }],
+                        nodes: [
+                            { type: 'Conv' }, { type: 'BatchNormalization' }, 
+                            { type: 'Relu' }, { type: 'GlobalAveragePool' }, 
+                            { type: 'MatMul' }, { type: 'Softmax' }
+                        ]
+                    }],
+                    metadata: { producer: 'pytorch', version: '1.12' }
+                };
+                
+                console.log('📊 開始分析模型...');
+                const analysisResult = await explainEngine.analyzeModel(mockModel);
+                
+                console.log('✅ 模型分析完成');
+                console.log('📋 分析結果:', analysisResult);
+                
+                // 測試匯出功能
+                console.log('📄 測試 Model Card 匯出...');
+                const modelCard = explainEngine.exportModelCard(analysisResult);
+                console.log('Model Card 長度:', modelCard.length, '字元');
+                
+                updateChecklist('匯出功能', 'success');
+                console.log('🎉 完整流程測試成功！');
+                
+            } catch (error) {
+                console.error('完整流程測試失敗:', error);
+                updateChecklist('匯出功能', 'error');
+            }
+        };
+        
+        // 頁面載入時自動執行基礎測試
+        console.log('🚀 Netron Explain 測試頁面已載入');
+        console.log('點擊按鈕開始測試各項功能');
+    </script>
+</body>
+</html>

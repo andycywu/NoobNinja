@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoobNinja Settings 快速測試</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .btn {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #0052a3;
+        }
+        .success { color: #28a745; }
+        .error { color: #dc3545; }
+        .info { color: #17a2b8; }
+        .result {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>🔧 NoobNinja 設定系統快速測試</h1>
+        
+        <button class="btn" onclick="testBasic()">基本功能測試</button>
+        <button class="btn" onclick="testSettings()">設定系統測試</button>
+        <button class="btn" onclick="clearAll()">清除測試</button>
+        
+        <div id="output"></div>
+    </div>
+
+    <script type="module">
+        let output = document.getElementById('output');
+        
+        function log(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = `result ${type}`;
+            div.innerHTML = message;
+            output.appendChild(div);
+        }
+        
+        window.testBasic = async function() {
+            output.innerHTML = '';
+            log('🧪 開始基本功能測試...', 'info');
+            
+            try {
+                // 測試模組載入
+                log('📦 載入 SettingsManager...', 'info');
+                const { SettingsManager } = await import('./source/ui/settings.js');
+                log('✅ SettingsManager 載入成功', 'success');
+                
+                // 測試設定管理
+                const settings = new SettingsManager();
+                log('✅ SettingsManager 實例創建成功', 'success');
+                
+                // 測試基本操作
+                settings.set('test.key', 'test.value');
+                const value = settings.get('test.key');
+                
+                if (value === 'test.value') {
+                    log('✅ 設定讀寫功能正常', 'success');
+                } else {
+                    log('❌ 設定讀寫功能異常', 'error');
+                }
+                
+                log('🎉 基本功能測試完成！', 'success');
+                
+            } catch (error) {
+                log(`❌ 基本功能測試失敗: ${error.message}`, 'error');
+                console.error(error);
+            }
+        };
+        
+        window.testSettings = async function() {
+            output.innerHTML = '';
+            log('🔧 開始設定系統測試...', 'info');
+            
+            try {
+                // 載入模組
+                const { SettingsManager, SettingsUI } = await import('./source/ui/settings.js');
+                log('✅ 設定模組載入成功', 'success');
+                
+                // 創建實例
+                const settingsManager = new SettingsManager();
+                const settingsUI = new SettingsUI(settingsManager);
+                log('✅ 設定UI實例創建成功', 'success');
+                
+                // 測試 render 方法
+                const testContainer = document.createElement('div');
+                testContainer.style.cssText = 'border: 1px solid #ccc; margin: 10px 0; min-height: 200px;';
+                
+                await settingsUI.render(testContainer);
+                output.appendChild(testContainer);
+                log('✅ 設定界面渲染成功', 'success');
+                
+                // 測試事件系統
+                let eventFired = false;
+                settingsUI.on('settingsChanged', (data) => {
+                    eventFired = true;
+                    log(`✅ 事件系統正常: ${data.key} = ${data.value}`, 'success');
+                });
+                
+                // 模擬事件觸發
+                settingsUI.emit('settingsChanged', { key: 'test', value: 'test' });
+                
+                if (eventFired) {
+                    log('✅ 事件系統測試通過', 'success');
+                } else {
+                    log('❌ 事件系統測試失敗', 'error');
+                }
+                
+                log('🎉 設定系統測試完成！', 'success');
+                
+            } catch (error) {
+                log(`❌ 設定系統測試失敗: ${error.message}`, 'error');
+                console.error(error);
+            }
+        };
+        
+        window.clearAll = function() {
+            output.innerHTML = '';
+            log('🧹 測試清除完成', 'info');
+        };
+    </script>
+</body>
+</html>
