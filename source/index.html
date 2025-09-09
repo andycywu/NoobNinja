@@ -2,20 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<<<<<<< HEAD
 <meta name="description" content="Visualizer for neural network, deep learning and machine learning models." />
-=======
-<meta name="description" content="NoobNinja - 模型小白解碼器，基於 Netron 的 AI 模型可視化與解釋工具。作者：AndyCy Wu" />
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
 <meta name="version" content="0.0.0">
 <meta name="date" content="">
-<<<<<<< HEAD
 <title>Netron</title>
-=======
-<title>NoobNinja</title>
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
 <link rel="stylesheet" type="text/css" href="grapher.css">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" href="icon.png">
@@ -23,109 +15,6 @@
 <link rel="apple-touch-icon-precomposed" type="image/png" href="icon.png">
 <link rel="fluid-icon" type="image/png" href="icon.png">
 <script type="text/javascript" src="index.js"></script>
-<<<<<<< HEAD
-=======
-<style id="theme-styles">
-/* NoobNinja 主題系統 */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --border-color: #dddddd;
-    --sidebar-bg: #f8f8f8;
-    --sidebar-border: #e0e0e0;
-    --button-bg: #777777;
-    --button-hover: #000000;
-    --input-bg: #fcfcfc;
-    --input-border: #eeeeee;
-}
-
-[data-theme="dark"] {
-    --bg-color: #1e1e1e;
-    --text-color: #ffffff;
-    --border-color: #444444;
-    --sidebar-bg: #2d2d2d;
-    --sidebar-border: #444444;
-    --button-bg: #666666;
-    --button-hover: #888888;
-    --input-bg: #2d2d2d;
-    --input-border: #444444;
-}
-
-/* 應用主題變數 */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-.sidebar {
-    background-color: var(--sidebar-bg);
-    border-color: var(--sidebar-border);
-}
-
-.sidebar-item-value {
-    background-color: var(--input-bg);
-    border-color: var(--input-border);
-}
-
-.toolbar-button {
-    stroke: var(--button-bg);
-}
-
-.toolbar-button:hover {
-    stroke: var(--button-hover);
-}
-
-/* 信心度徽章樣式 */
-.confidence-badge {
-    display: inline-block;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 9px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-left: 8px;
-}
-
-.confidence-high {
-    background-color: #4caf50;
-    color: white;
-}
-
-.confidence-medium {
-    background-color: #ff9800;
-    color: white;
-}
-
-.confidence-low {
-    background-color: #f44336;
-    color: white;
-}
-
-.provenance-badge {
-    display: inline-block;
-    padding: 2px 6px;
-    border-radius: 8px;
-    font-size: 8px;
-    font-weight: bold;
-    margin-left: 4px;
-}
-
-.provenance-llm {
-    background-color: #2196f3;
-    color: white;
-}
-
-.provenance-heuristic {
-    background-color: #9c27b0;
-    color: white;
-}
-
-.provenance-metadata {
-    background-color: #607d8b;
-    color: white;
-}
-</style>
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
 <style>
 html { touch-action: none; overflow: hidden; width: 100%; height: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; text-rendering: optimizeLegibility; -webkit-text-rendering: optimizeLegibility; -moz-text-rendering: optimizeLegibility; -ms-text-rendering: optimizeLegibility; -o-text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
 body { touch-action: none; overflow: hidden; width: 100%; height: 100%; margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "PingFang SC"; font-size: 12px; text-rendering: geometricPrecision; }
@@ -417,11 +306,7 @@ button { font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI"
 </div>
 <div id="sidebar" class="sidebar">
     <h1 id="sidebar-title" class="sidebar-title"></h1>
-<<<<<<< HEAD
     <a id="sidebar-closebutton" class="sidebar-closebutton" href="javascript:void(0)" draggable="false">&times;</a>
-=======
-    <a id="sidebar-closebutton" class="sidebar-closebutton" href="#" draggable="false">&times;</a>
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
     <div id="sidebar-content" class="sidebar-content"></div>
     <svg width="0" height="0" display="none">
         <defs>
@@ -469,19 +354,6 @@ button { font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI"
             <line class="stroke" x1="78" y1="78" x2="82" y2="82" stroke-width="8" stroke-linecap="square"></line>
         </svg>
     </button>
-<<<<<<< HEAD
-=======
-    <button id="zoom-fit-button" class="toolbar-button" title="Overview">
-        <svg class="toolbar-icon" viewbox="0 0 100 100">
-            <rect class="border" x="18" y="18" width="64" height="64" rx="6" ry="6" stroke-width="6"></rect>
-            <polyline class="border" points="30,24 24,24 24,30" stroke-width="6" fill="none"></polyline>
-            <polyline class="border" points="70,24 76,24 76,30" stroke-width="6" fill="none"></polyline>
-            <polyline class="border" points="30,76 24,76 24,70" stroke-width="6" fill="none"></polyline>
-            <polyline class="border" points="70,76 76,76 76,70" stroke-width="6" fill="none"></polyline>
-            <rect class="stroke" x="18" y="18" width="64" height="64" rx="6" ry="6" stroke-width="3"></rect>
-        </svg>
-    </button>
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
     <button id="sidebar-model-button" class="toolbar-button" title="Model Properties">
         <svg class="toolbar-icon" viewbox="0 0 100 100">
             <rect class="border" x="12" y="12" width="76" height="76" rx="16" ry="16" stroke-width="8"></rect>
@@ -510,42 +382,6 @@ button { font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI"
             <circle class="stroke fill" cx="50" cy="50" r="3" stroke-width="4"></circle>
         </svg>
     </button>
-<<<<<<< HEAD
-=======
-    <button id="sidebar-explain-button" class="toolbar-button" title="模型小白解碼器">
-        <svg class="toolbar-icon" viewBox="0 0 100 100">
-            <rect class="border" x="12" y="12" width="76" height="76" rx="16" ry="16" stroke-width="8" stroke="#fff"></rect>
-            <text class="border" x="50" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff">?</text>
-            <circle class="border" cx="50" cy="65" r="3" stroke-width="8" stroke="#fff"></circle>
-            <rect class="stroke" x="12" y="12" width="76" height="76" rx="16" ry="16" stroke-width="4"></rect>
-            <text class="fill" x="50" y="40" text-anchor="middle" font-size="20" font-weight="bold">?</text>
-        </svg>
-    </button>
-    <button id="sidebar-settings-button" class="toolbar-button" title="設定">
-        <svg class="toolbar-icon" viewBox="0 0 100 100">
-            <circle class="border" cx="50" cy="50" r="30" stroke-width="8" stroke="#fff"></circle>
-            <circle class="border" cx="50" cy="50" r="15" stroke-width="8" stroke="#fff"></circle>
-            <rect class="border" x="48" y="12" width="4" height="15" stroke-width="4" stroke="#fff"></rect>
-            <rect class="border" x="48" y="73" width="4" height="15" stroke-width="4" stroke="#fff"></rect>
-            <rect class="border" x="12" y="48" width="15" height="4" stroke-width="4" stroke="#fff"></rect>
-            <rect class="border" x="73" y="48" width="15" height="4" stroke-width="4" stroke="#fff"></rect>
-            <rect class="border" x="22" y="22" width="12" height="3" stroke-width="4" stroke="#fff" transform="rotate(45 28 28)"></rect>
-            <rect class="border" x="66" y="66" width="12" height="3" stroke-width="4" stroke="#fff" transform="rotate(45 72 72)"></rect>
-            <rect class="border" x="22" y="75" width="12" height="3" stroke-width="4" stroke="#fff" transform="rotate(-45 28 72)"></rect>
-            <rect class="border" x="66" y="22" width="12" height="3" stroke-width="4" stroke="#fff" transform="rotate(-45 72 28)"></rect>
-            <circle class="stroke" cx="50" cy="50" r="30" stroke-width="4"></circle>
-            <circle class="stroke" cx="50" cy="50" r="15" stroke-width="4"></circle>
-            <rect class="stroke" x="48" y="12" width="4" height="15" stroke-width="2"></rect>
-            <rect class="stroke" x="48" y="73" width="4" height="15" stroke-width="2"></rect>
-            <rect class="stroke" x="12" y="48" width="15" height="4" stroke-width="2"></rect>
-            <rect class="stroke" x="73" y="48" width="15" height="4" stroke-width="2"></rect>
-            <rect class="stroke" x="22" y="22" width="12" height="3" stroke-width="2" transform="rotate(45 28 28)"></rect>
-            <rect class="stroke" x="66" y="66" width="12" height="3" stroke-width="2" transform="rotate(45 72 72)"></rect>
-            <rect class="stroke" x="22" y="75" width="12" height="3" stroke-width="2" transform="rotate(-45 28 72)"></rect>
-            <rect class="stroke" x="66" y="22" width="12" height="3" stroke-width="2" transform="rotate(-45 72 28)"></rect>
-        </svg>
-    </button>
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
     <div id="toolbar-navigator" class="toolbar-select">
         <select id="toolbar-target-selector">
             <option value="Graphs" disabled="true">&#x2014; Graphs &#x2014;&#x2014;</option>

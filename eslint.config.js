@@ -6,12 +6,9 @@ export default [
         ignores: [
             'dist/**',
             'third_party/**',
-<<<<<<< HEAD
             '.history/**',
             'node_modules/**',
             'build/**'
-=======
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
         ]
     },
     {
@@ -79,12 +76,8 @@ export default [
             'no-class-assign': 'error',
             'no-compare-neg-zero': 'error',
             'no-cond-assign': 'error',
-<<<<<<< HEAD
             // temporarily relax common dev rules to reduce noise during rebrand
             'no-console': 'off',
-=======
-            'no-console': 'error',
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
             'no-const-assign': 'error',
             'no-constant-binary-expression': 'error',
             'no-constant-condition': 'error',
@@ -190,12 +183,8 @@ export default [
             'no-unused-expressions': 'error',
             'no-unused-labels': 'error',
             'no-unused-private-class-members': 'error',
-<<<<<<< HEAD
             // warn about unused vars instead of error to allow gradual cleanup
             'no-unused-vars': 'warn',
-=======
-            'no-unused-vars': 'error',
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
             'no-use-before-define': 'error',
             // 'no-useless-assignment': 'error',
             'no-useless-backreference': 'error',
