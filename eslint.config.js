@@ -227,7 +227,8 @@ export default [
             // 'sort-keys': 'error',
             'sort-vars': 'error',
             'space-before-blocks': 'error',
-            'space-in-parens': 'error',
+            // temporarily disable heavy formatting rule to allow bulk autofix on large files
+            'space-in-parens': 'off',
             'space-infix-ops': 'error',
             'strict': 'error',
             'symbol-description': 'error',
