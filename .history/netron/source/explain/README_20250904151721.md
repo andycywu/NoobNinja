@@ -1,0 +1,203 @@
+# NoobNinja - 小白模型解惑工具
+
+## 🎯 專案概述
+
+NoobNinja 是一個基於 Netron 構建的 AI 模型解惑工具，旨在為初學者提供直觀易懂的模型分析和解釋。
+
+## ✨ 主要功能
+
+### 🔍 智能模型分析
+
+- **自動模型摘要**：提取模型結構、輸入輸出形狀、層類型等關鍵資訊
+- **任務類型推測**：自動判斷模型用途（分類、物件偵測、語意分割等）
+- **量化狀態檢測**：識別模型是否經過量化處理
+
+### 🧠 多種解釋模式
+
+- **規則引擎**：基於預設規則的快速解釋
+- **LLM 整合**：支援 Ollama（本地）和 OpenAI API
+- **白話解釋**：將技術細節轉換為易懂的語言
+
+### 🏃‍♂️ 模型測試執行
+
+- **瀏覽器內執行**：使用 ONNX Runtime Web 進行模型測試
+- **效能分析**：提供執行時間和記憶體使用情況
+- **錯誤檢測**：識別常見的模型問題
+
+### 📄 模型卡匯出
+
+- **Markdown 格式**：產生標準化的模型說明文檔
+- **程式碼範例**：提供多語言的使用範例
+- **ZIP 打包**：一鍵匯出完整的模型資料包
+
+## 🚀 快速開始
+
+### 1. 啟動開發環境
+
+```bash
+cd netron
+npx serve -p 8080 source
+```
+
+### 2. 開啟 Netron
+
+瀏覽至 `http://localhost:8080`
+
+### 3. 使用 Explain 功能
+
+1. 載入任何支援的模型檔案（ONNX、TensorFlow Lite、CoreML 等）
+2. 點擊右側邊欄的 **Explain** 按鈕
+3. 選擇解釋模式（規則引擎或 LLM）
+4. 查看分析結果和白話解釋
+
+## 🧪 測試功能
+
+### 瀏覽器測試頁面
+訪問 `http://localhost:8080/explain/test/index.html` 進行完整功能測試
+
+### 命令列測試
+```bash
+node source/explain/test/cli-test.mjs
+```
+
+## 📁 架構說明
+
+```
+source/explain/
+├── index.js          # 主要的 ExplainEngine 類別
+├── summarizer.js      # 模型摘要分析器
+├── rules.js          # 規則引擎解釋器
+├── llm-providers.js  # LLM 服務提供者
+├── dummy-run.js      # 模型測試執行器
+├── prompt.js         # LLM 提示詞管理
+├── validator.js      # 結果驗證器
+├── exporter.js       # 模型卡匯出器
+└── test/             # 測試檔案
+    ├── index.html    # 瀏覽器測試頁面
+    ├── cli-test.mjs  # 命令列測試腳本
+    └── basic-tests.js # 基礎測試函數
+```
+
+## 🔧 配置說明
+
+### LLM 提供者設定
+
+#### Ollama（推薦本地使用）
+```bash
+# 安裝 Ollama
+curl -fsSL https://ollama.ai/install.sh | sh
+
+# 下載模型（例如 llama2）
+ollama pull llama2
+
+# 啟動服務
+ollama serve
+```
+
+#### OpenAI API
+在瀏覽器控制台中設定 API 金鑰：
+```javascript
+localStorage.setItem('openai_api_key', 'your-api-key-here');
+```
+
+## 🔍 使用範例
+
+### 基礎模型分析
+```javascript
+import { ExplainEngine } from './explain/index.js';
+
+const explainEngine = new ExplainEngine();
+const result = await explainEngine.analyzeModel(model);
+console.log(result.summary, result.explanation);
+```
+
+### 匯出模型卡
+```javascript
+const modelCard = explainEngine.exportModelCard(analysisResult);
+console.log(modelCard); // Markdown 格式的模型說明
+```
+
+## 🎨 UI 整合
+
+NoobNinja 無縫整合到 Netron 的使用者介面中：
+
+- **Explain 按鈕**：位於右側邊欄，與 Properties 並排
+- **載入狀態**：顯示分析進度
+- **結果展示**：以分段式呈現分析結果
+- **互動操作**：支援複製、匯出等操作
+
+## 🛠️ 開發指南
+
+### 新增自定義規則
+在 `rules.js` 中的 `generateExplanation` 方法內新增：
+
+```javascript
+if (summary.taskGuess === 'your-task-type') {
+    return {
+        overview: '您的任務描述...',
+        technical: '技術細節...',
+        usage: '使用建議...'
+    };
+}
+```
+
+### 擴展 LLM 提供者
+在 `llm-providers.js` 中實作新的提供者類別：
+
+```javascript
+class CustomLLMProvider {
+    async isAvailable() { /* 檢查可用性 */ }
+    async generateExplanation(prompt) { /* 產生解釋 */ }
+}
+```
+
+## 📊 支援的模型格式
+
+- ✅ ONNX (.onnx)
+- ✅ TensorFlow Lite (.tflite)
+- ✅ CoreML (.mlmodel)
+- ✅ PyTorch (.pt, .pth)
+- ✅ TensorFlow (.pb)
+- ✅ Keras (.h5)
+- ✅ Caffe (.caffemodel)
+- ✅ 以及 Netron 支援的其他格式
+
+## 🎯 特色亮點
+
+### 🌟 為初學者設計
+- 避免過度技術性的術語
+- 提供實用的程式碼範例
+- 專注於「如何使用」而非「如何實作」
+
+### 🚀 高效能
+- 瀏覽器內執行，無需後端
+- 智能快取機制
+- 漸進式載入
+
+### 🔒 隱私保護
+- 本地模型分析，數據不外洩
+- 支援離線 LLM（Ollama）
+- 可選擇的雲端 API 使用
+
+## 🤝 貢獻指南
+
+歡迎提交 Issue 和 Pull Request！
+
+1. Fork 專案
+2. 建立 feature branch
+3. 提交更改
+4. 建立 Pull Request
+
+## 📄 授權條款
+
+本專案基於 MIT 授權條款開源。
+
+## 🙏 致謝
+
+- [Netron](https://github.com/lutzroeder/netron) - 優秀的模型視覺化工具
+- [ONNX Runtime Web](https://onnxruntime.ai/docs/get-started/with-javascript/web.html) - 瀏覽器內模型執行
+- [Ollama](https://ollama.ai/) - 本地 LLM 解決方案
+
+---
+
+💡 **提示**：如果遇到問題，請先查看測試頁面中的功能檢查，並確保所有模組都正確載入。

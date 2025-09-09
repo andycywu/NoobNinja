@@ -10,14 +10,7 @@
     "date": "2025-08-29 12:59:01",
     "description": "NoobNinja - 模型小白解碼器，基於 Netron 的 AI 模型可視化與解釋工具",
     "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/andycywu/NoobNinja.git"
-    },
-    "homepage": "https://github.com/andycywu/NoobNinja#readme",
-    "bugs": {
-        "url": "https://github.com/andycywu/NoobNinja/issues"
-    },
+    "repository": "andycyw/NoobNinja",
     "type": "module",
     "main": "source/app.js",
     "scripts": {

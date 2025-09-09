@@ -12,12 +12,9 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/andycywu/NoobNinja.git"
+        "url": "https://github.com/andycyw/NoobNinja.git"
     },
-    "homepage": "https://github.com/andycywu/NoobNinja#readme",
-    "bugs": {
-        "url": "https://github.com/andycywu/NoobNinja/issues"
-    },
+    "homepage": "https://github.com/andycyw/NoobNinja",
     "type": "module",
     "main": "source/app.js",
     "scripts": {
