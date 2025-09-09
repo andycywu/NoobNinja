@@ -12,18 +12,9 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-<<<<<<< HEAD
-        "url": "git+https://github.com/andycywu/NoobNinja.git"
-    },
-    "homepage": "https://github.com/andycywu/NoobNinja#readme",
-    "bugs": {
-        "url": "https://github.com/andycywu/NoobNinja/issues"
-    },
-=======
         "url": "https://github.com/andycyw/NoobNinja.git"
     },
     "homepage": "https://github.com/andycyw/NoobNinja",
->>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
     "type": "module",
     "main": "source/app.js",
     "scripts": {
