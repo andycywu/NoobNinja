@@ -44,12 +44,34 @@ view.View = class {
             this._element('sidebar-target-button').addEventListener('click', () => {
                 this.showTargetProperties();
             });
+<<<<<<< HEAD
+=======
+            this._element('sidebar-explain-button').addEventListener('click', () => {
+                this.showExplainProperties();
+            });
+            this._element('sidebar-settings-button').addEventListener('click', () => {
+                this.showSettings();
+            });
+>>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
             this._element('zoom-in-button').addEventListener('click', () => {
                 this.zoomIn();
             });
             this._element('zoom-out-button').addEventListener('click', () => {
                 this.zoomOut();
             });
+<<<<<<< HEAD
+=======
+            const fitButton = this._element('zoom-fit-button');
+            if (fitButton) {
+                fitButton.addEventListener('click', () => {
+                    try {
+                        this.fitToView();
+                    } catch (e) {
+                        this.error(e, 'Error fitting view.', null);
+                    }
+                });
+            }
+>>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
             this._element('toolbar-path-back-button').addEventListener('click', async () => {
                 await this.popTarget();
             });
@@ -377,6 +399,24 @@ view.View = class {
         this._target.zoom = 1;
     }
 
+<<<<<<< HEAD
+=======
+    fitToView() {
+        if (!this._target) {
+            return;
+        }
+        const document = this._host.document;
+        const container = document.getElementById('target');
+        // compute same limit as _updateZoom
+        const limit = this.options.direction === 'vertical' ?
+            container.clientHeight / this._target._height :
+            container.clientWidth / this._target._width;
+        const min = Math.min(Math.max(limit, 0.15), 1);
+        // set zoom to min (fit) within allowed bounds
+        this._target.zoom = min;
+    }
+
+>>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
     async error(error, name, screen) {
         if (this._sidebar) {
             this._sidebar.close();
@@ -511,6 +551,20 @@ view.View = class {
             this._path = [];
             this._activeTarget = null;
         }
+<<<<<<< HEAD
+=======
+
+        // 🤖 當模型載入成功後，自動觸發 LLM 分析（不直接 log 到 console）
+        if (model && status === '') {
+            try {
+                this._host.event('autotrigger_explain', { model: model && model.identifier ? model.identifier : null });
+                await this.showExplainProperties();
+                this._host.event('autotrigger_explain_done', { model: model && model.identifier ? model.identifier : null });
+            } catch (error) {
+                this._host.event('autotrigger_explain_error', { message: error && error.message ? error.message : String(error) });
+            }
+        }
+>>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
         this.show(null);
         const path = this._element('toolbar-path');
         const back = this._element('toolbar-path-back-button');
@@ -789,6 +843,64 @@ view.View = class {
         }
     }
 
+<<<<<<< HEAD
+=======
+    async showExplainProperties() {
+        if (!this._model) {
+            return;
+        }
+        try {
+            // 動態載入 explain 模組
+            if (!this._explainEngine) {
+                const explainModule = await import('./explain/index.js');
+                this._explainEngine = new explainModule.ExplainEngine();
+
+                // 載入設定管理器
+                const settingsModule = await import('./ui/settings.js');
+                this._settingsManager = new settingsModule.SettingsManager();
+
+                // 配置 explain 引擎使用設定
+                const llmConfig = this._settingsManager.getLLMConfig();
+
+                /* eslint-disable no-console */
+                console.log('🔧 [View] 設定 LLM 配置:', llmConfig);
+                /* eslint-enable no-console */
+
+                this._explainEngine.configure(llmConfig);
+
+                /* eslint-disable no-console */
+                console.log('🔧 [View] ExplainEngine 設定後的狀態:', this._explainEngine.settings);
+                /* eslint-enable no-console */
+            }
+
+            const sidebar = new view.ExplainSidebar(this, this._model, this._explainEngine);
+            this._sidebar.open(sidebar, '模型小白解碼器');
+        } catch (error) {
+            this.error(error, 'Error showing model explanation.', null);
+        }
+    }
+
+    async showSettings() {
+        try {
+            if (this._menu) {
+                this._menu.close();
+            }
+
+            // 載入設定系統
+            if (!this._settingsManager) {
+                const SettingsManager = (await import('./ui/settings.js')).SettingsManager;
+                this._settingsManager = new SettingsManager();
+            }
+
+            // 創建設定側邊欄
+            const sidebar = new view.SettingsSidebar(this, this._settingsManager);
+            this._sidebar.open(sidebar, '設定');
+        } catch (error) {
+            this.error(error, 'Error showing settings.', null);
+        }
+    }
+
+>>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
     showNodeProperties(node) {
         if (node) {
             try {
@@ -6975,6 +7087,670 @@ view.Metadata = class {
     }
 };
 
+<<<<<<< HEAD
+=======
+view.ExplainSidebar = class extends view.ObjectSidebar {
+
+    constructor(context, model, explainEngine) {
+        super(context);
+        this._model = model;
+        this._explainEngine = explainEngine;
+        this._analysisResult = null;
+        this._isLoading = false;
+        this._uiRenderer = null;
+
+        // 監聽重新掃描事件
+        document.addEventListener('explain-rescan', () => {
+            this._handleRescan();
+        });
+    }
+
+    get identifier() {
+        return 'explain';
+    }
+
+    async render() {
+        // 載入 UI 渲染器
+        if (!this._uiRenderer) {
+            try {
+                const rendererModule = await import('./ui/explain-renderer.js');
+                this._uiRenderer = new rendererModule.ExplainUIRenderer();
+            } catch (error) {
+                /* eslint-disable no-console */
+                console.error('Failed to load explain renderer:', error);
+                /* eslint-enable no-console */
+                this._renderError(new Error('無法載入解釋介面'));
+                return;
+            }
+        }
+
+        // 如果正在載入，顯示載入狀態
+        if (this._isLoading) {
+            this._renderLoading();
+            return;
+        }
+
+        // 如果還沒有分析結果，開始分析或顯示排隊/執行狀態
+        if (!this._analysisResult) {
+            // 如果 ExplainEngine 正在執行其他分析，先顯示 queued 狀態
+            try {
+                if (this._explainEngine && this._explainEngine._llmRunning) {
+                    this._isLoading = true;
+                    this._renderLoading('queued');
+                    // 然後啟動分析（會被排隊在 ExplainEngine 內）
+                    await this._performAnalysis();
+                    return;
+                }
+            } catch (e) {
+                // ignore
+            }
+
+            await this._performAnalysis();
+            return;
+        }
+
+        this._renderContent();
+    }
+
+    async _performAnalysis() {
+        this._isLoading = true;
+        this._renderLoading();
+
+        try {
+            // 嘗試獲取模型二進位數據（用於 dummy run）
+            let modelBuffer = null;
+            if (this._view && this._view._host && this._view._host.buffer) {
+                modelBuffer = this._view._host.buffer;
+            }
+
+            this._analysisResult = await this._explainEngine.analyzeModel(this._model, modelBuffer);
+            this._isLoading = false;
+
+            // 重新渲染實際內容
+            this.element.innerHTML = '';
+            this._renderContent();
+
+        } catch (error) {
+            this._isLoading = false;
+            this._renderError(error);
+        }
+    }
+
+    _renderLoading(status) {
+        this.element.innerHTML = '';
+        this.element.className = 'sidebar-object';
+        const loadingDiv = this.createElement('div', 'explain-loading');
+        const titleText = status === 'queued' ? '⏳ 小白已接到任務，正在排隊中...' : '🔍 分析模型中...';
+        const subtitleText = status === 'queued' ? '目前系統忙碌，模型解譯會在前一個任務完成後開始' : '正在解析模型結構、生成解釋與檢測 LLM 可用性';
+        loadingDiv.innerHTML = `
+            <div style="text-align: center; padding: 20px;">
+                <div style="margin-bottom: 10px; font-size: 14px;">${titleText}</div>
+                <div style="font-size: 11px; color: #666; line-height: 1.4;">
+                    ${subtitleText}
+                </div>
+                <div style="margin-top: 15px;">
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+        `;
+        this.element.appendChild(loadingDiv);
+
+        // 加入載入動畫樣式
+        this._addLoadingStyles();
+    }
+
+    _renderError(error) {
+        this.element.innerHTML = '';
+        this.element.className = 'sidebar-object';
+
+        const errorDiv = this.createElement('div', 'explain-error');
+        errorDiv.innerHTML = `
+            <div style="text-align: center; padding: 20px;">
+                <div style="margin-bottom: 10px; color: #d32f2f; font-size: 14px;">❌ 分析失敗</div>
+                <div style="font-size: 11px; color: #666; line-height: 1.4; margin-bottom: 15px;">
+                    ${error.message || '未知錯誤'}
+                </div>
+                <button class="explain-retry-btn" data-action="retry">
+                    重試
+                </button>
+            </div>
+        `;
+
+        // 綁定重試按鈕事件
+        const retryBtn = errorDiv.querySelector('.explain-retry-btn');
+        retryBtn.addEventListener('click', () => {
+            this._analysisResult = null;
+            this.render();
+        });
+
+        // 綁定重試事件
+        errorDiv.addEventListener('retry', () => {
+            this._analysisResult = null;
+            this.render();
+        });
+
+        this.element.appendChild(errorDiv);
+    }
+
+    _renderContent() {
+        this.element.innerHTML = '';
+        this.element.className = 'sidebar-object sidebar-explain';
+
+        // 確保側邊欄有適當的高度和滾動
+        this.element.style.height = '100%';
+        this.element.style.display = 'flex';
+        this.element.style.flexDirection = 'column';
+
+        if (this._uiRenderer && this._analysisResult) {
+            this._uiRenderer.renderExplainPanel(this._analysisResult, this.element);
+        } else {
+            // 回退到簡單渲染
+            this._renderSimpleContent();
+        }
+    }
+
+    _renderSimpleContent() {
+        const summary = this._analysisResult.summary;
+        const explanation = this._analysisResult.explanation;
+
+        // 創建滾動容器
+        const scrollContainer = this.createElement('div', 'simple-explain-container');
+        scrollContainer.style.overflowY = 'auto';
+        scrollContainer.style.overflowX = 'hidden';
+        scrollContainer.style.height = '100%';
+        scrollContainer.style.padding = '0';
+
+        // 將所有內容加到滾動容器中
+        const tempElement = this.element;
+        this.element = scrollContainer;
+
+        // 模型基本資訊
+        this.addSection('模型摘要');
+        this.addProperty('名稱', summary.modelName);
+        this.addProperty('格式', summary.format.toUpperCase());
+        this.addProperty('任務類型', this._translateTask(summary.taskGuess));
+
+        if (summary.quantization && summary.quantization.isQuantized) {
+            this.addProperty('量化', `是 (${summary.quantization.precision})`);
+        }
+
+        // 模型用途
+        if (explanation.purpose) {
+            this.addSection('模型用途');
+            const purposeDiv = this.createElement('div', 'sidebar-item-value');
+            purposeDiv.innerHTML = `<div class="sidebar-item-value-line">${explanation.purpose}</div>`;
+            this.element.appendChild(purposeDiv);
+        }
+
+        // 輸入輸出
+        this.addSection('輸入輸出');
+        for (const input of summary.inputs) {
+            this.addProperty(input.name, `${JSON.stringify(input.shape)} (${input.dtype})`);
+        }
+
+        for (const output of summary.outputs) {
+            this.addProperty(output.name, `${JSON.stringify(output.shape)} (${output.dtype})`);
+        }
+
+        // 匯出按鈕
+        this.addSection('匯出');
+        this._addExportButtons();
+
+        // 恢復原始元素並加入滾動容器
+        this.element = tempElement;
+        this.element.appendChild(scrollContainer);
+    }
+
+    _addExportButtons() {
+        const buttonContainer = this.createElement('div', 'sidebar-item-value');
+        buttonContainer.style.padding = '10px 0';
+
+        // Model Card 按鈕
+        const modelCardBtn = this.createElement('button', 'sidebar-item-value-button');
+        modelCardBtn.innerText = '📄 匯出 Model Card';
+        modelCardBtn.style.width = '100%';
+        modelCardBtn.style.marginBottom = '5px';
+        modelCardBtn.addEventListener('click', () => {
+            this._exportModelCard();
+        });
+
+        // 完整包 按鈕
+        const fullPackageBtn = this.createElement('button', 'sidebar-item-value-button');
+        fullPackageBtn.innerText = '📦 匯出完整包';
+        fullPackageBtn.style.width = '100%';
+        fullPackageBtn.addEventListener('click', () => {
+            this._exportFullPackage();
+        });
+
+        buttonContainer.appendChild(modelCardBtn);
+        buttonContainer.appendChild(fullPackageBtn);
+        this.element.appendChild(buttonContainer);
+    }
+
+    async _exportModelCard() {
+        try {
+            const markdown = this._explainEngine.exportModelCard(this._analysisResult);
+            this._downloadFile(`${this._analysisResult.summary.modelName}_README.md`, markdown, 'text/markdown');
+        } catch (error) {
+            /* eslint-disable no-console */
+            console.error('匯出 Model Card 失敗:', error);
+            /* eslint-enable no-console */
+        }
+    }
+
+    async _exportFullPackage() {
+        try {
+            const packageData = await this._explainEngine.exportModelPackage(this._analysisResult);
+
+            if (Array.isArray(packageData)) {
+                // 簡化版：依序下載所有檔案
+                for (let i = 0; i < packageData.length; i++) {
+                    const file = packageData[i];
+                    this._downloadFile(file.name, file.content, 'text/plain');
+                    if (i < packageData.length - 1) {
+                        // 避免同時下載，除了最後一個檔案
+                        /* eslint-disable no-await-in-loop */
+                        await new Promise((resolve) => {
+                            setTimeout(() => resolve(), 100);
+                        });
+                        /* eslint-enable no-await-in-loop */
+                    }
+                }
+            } else {
+                // ZIP 格式
+                this._downloadBlob(`${this._analysisResult.summary.modelName}_package.zip`, packageData);
+            }
+        } catch (error) {
+            /* eslint-disable no-console */
+            console.error('匯出完整包失敗:', error);
+            /* eslint-enable no-console */
+        }
+    }
+
+    _downloadFile(filename, content, mimeType) {
+        const blob = new Blob([content], { type: mimeType });
+        this._downloadBlob(filename, blob);
+    }
+
+    _downloadBlob(filename, blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    _translateTask(task) {
+        const translations = {
+            'classification': '圖像分類',
+            'detection': '物件偵測',
+            'pose': '姿態估計',
+            'segmentation': '影像分割',
+            'unknown': '未知任務'
+        };
+        return translations[task] || task;
+    }
+
+    _translateSemantics(semantics) {
+        const translations = {
+            'logits': '分類分數',
+            'bounding_boxes': '邊界框',
+            'keypoints': '關鍵點',
+            'segmentation_mask': '分割遮罩',
+            'confidence_scores': '置信度',
+            'classification': '分類結果',
+            'unknown': '未知'
+        };
+        return translations[semantics] || semantics;
+    }
+
+    // 當用戶設定改變時重新分析
+    async refresh() {
+        this._analysisResult = null;
+        await this.render();
+    }
+
+    /**
+     * 添加載入動畫樣式
+     */
+    _addLoadingStyles() {
+        const styleId = 'explain-loading-styles';
+        if (document.getElementById(styleId)) {
+            return;
+        }
+
+        const style = document.createElement('style');
+        style.id = styleId;
+        style.textContent = `
+            .loading-spinner {
+                width: 20px;
+                height: 20px;
+                border: 2px solid #f3f3f3;
+                border-top: 2px solid #007acc;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+
+            .explain-loading {
+                opacity: 0;
+                animation: fadeIn 0.3s ease-in-out forwards;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+};
+
+view.SettingsSidebar = class extends view.ObjectSidebar {
+
+    constructor(view, settingsManager) {
+        super(view);
+        this._settingsManager = settingsManager;
+        this._settingsUI = null;
+    }
+
+    async render() {
+        try {
+            this.element.innerHTML = '';
+            this.element.className = 'sidebar-object';
+
+            // 直接創建簡化的設定介面
+            this.renderSettingsForm();
+
+        } catch (error) {
+            /* eslint-disable no-console */
+            console.error('渲染設定界面失敗:', error);
+            /* eslint-enable no-console */
+            this.element.innerHTML = `
+                <div style="padding: 20px; color: #d32f2f;">
+                    <h3>載入設定失敗</h3>
+                    <p>${error.message}</p>
+                </div>
+            `;
+        }
+    }
+
+    renderSettingsForm() {
+        const settings = this._settingsManager.all();
+
+        // 主題設定
+        this.renderSection('主題', [
+            this.renderRadioGroup('theme', '主題選擇', [
+                { value: 'light', label: '淺色主題' },
+                { value: 'dark', label: '深色主題' }
+            ], settings.theme)
+        ]);
+
+        // LLM 設定
+        this.renderSection('LLM 設定', [
+            this.renderCheckbox('llm.enabled', '啟用 LLM（高品質解說）', settings['llm.enabled']),
+            this.renderSelect('llm.provider', 'Provider', [
+                { value: 'ollama', label: '本地 Ollama' },
+                { value: 'openai', label: 'OpenAI API' }
+            ], settings['llm.provider']),
+            this.renderCheckbox('llm.allowNetwork', '允許網路連線', settings['llm.allowNetwork'])
+        ]);
+
+        // Ollama 設定
+        this.renderSection('Ollama 設定', [
+            this.renderInput('llm.ollama.baseUrl', 'Ollama 位址', settings['llm.ollama.baseUrl'], 'http://localhost:11434'),
+            this.renderInput('llm.ollama.model', '模型', settings['llm.ollama.model'], 'llama3.2')
+        ]);
+
+        // OpenAI 設定
+        this.renderSection('OpenAI 設定', [
+            this.renderInput('llm.openai.baseUrl', 'Base URL（可選）', settings['llm.openai.baseUrl'], '留空使用官方 API'),
+            this.renderInput('llm.openai.apiKey', 'API Key', settings['llm.openai.apiKey'], 'sk-...', 'password')
+        ]);
+
+        // 狀態顯示
+        this.renderSection('狀態', [
+            this.renderStatus()
+        ]);
+
+        // 操作按鈕
+        this.renderActions();
+
+        // 綁定事件
+        this.bindFormEvents();
+    }
+
+    renderSection(title, items) {
+        const section = document.createElement('div');
+        section.className = 'sidebar-section';
+        section.innerHTML = `<div class="sidebar-header">${title}</div>`;
+
+        items.forEach((item) => {
+            if (item) {
+                section.appendChild(item);
+            }
+        });
+
+        this.element.appendChild(section);
+    }
+
+    renderCheckbox(key, label, checked) {
+        const item = document.createElement('div');
+        item.className = 'sidebar-item';
+        item.innerHTML = `
+            <div class="sidebar-item-name">
+                <input type="text" readonly value="${label}" style="text-align: left; color: #333;" />
+            </div>
+            <div class="sidebar-item-value-list">
+                <div class="sidebar-item-value">
+                    <div class="sidebar-item-value-line">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" data-key="${key}" ${checked ? 'checked' : ''} style="margin-right: 8px;" />
+                            ${checked ? '已啟用' : '已停用'}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        `;
+        return item;
+    }
+
+    renderRadioGroup(key, label, options, selected) {
+        const item = document.createElement('div');
+        item.className = 'sidebar-item';
+
+        const optionsHtml = options.map((option) => `
+            <label style="display: flex; align-items: center; margin-bottom: 4px; cursor: pointer;">
+                <input type="radio" name="${key}" data-key="${key}" value="${option.value}"
+                       ${selected === option.value ? 'checked' : ''} style="margin-right: 8px;" />
+                ${option.label}
+            </label>
+        `).join('');
+
+        item.innerHTML = `
+            <div class="sidebar-item-name">
+                <input type="text" readonly value="${label}" style="text-align: left; color: #333;" />
+            </div>
+            <div class="sidebar-item-value-list">
+                <div class="sidebar-item-value">
+                    <div class="sidebar-item-value-line">
+                        ${optionsHtml}
+                    </div>
+                </div>
+            </div>
+        `;
+        return item;
+    }
+
+    renderSelect(key, label, options, selected) {
+        const item = document.createElement('div');
+        item.className = 'sidebar-item';
+
+        const optionsHtml = options.map((option) =>
+            `<option value="${option.value}" ${selected === option.value ? 'selected' : ''}>${option.label}</option>`
+        ).join('');
+
+        item.innerHTML = `
+            <div class="sidebar-item-name">
+                <input type="text" readonly value="${label}" style="text-align: left; color: #333;" />
+            </div>
+            <div class="sidebar-item-value-list">
+                <div class="sidebar-item-value" style="padding: 0;">
+                    <select class="sidebar-item-selector" data-key="${key}">
+                        ${optionsHtml}
+                    </select>
+                </div>
+            </div>
+        `;
+        return item;
+    }
+
+    renderInput(key, label, value, placeholder, type = 'text') {
+        const item = document.createElement('div');
+        item.className = 'sidebar-item';
+
+        // 為密碼欄位建立表單容器
+        const inputHtml = type === 'password' ?
+            `<form style="margin: 0; padding: 0;" onsubmit="return false;">
+                <input type="${type}" class="sidebar-item-selector" data-key="${key}" 
+                       value="${value || ''}" placeholder="${placeholder}" 
+                       style="font-family: monospace;" autocomplete="current-password" />
+            </form>` :
+            `<input type="${type}" class="sidebar-item-selector" data-key="${key}" 
+                   value="${value || ''}" placeholder="${placeholder}" style="font-family: monospace;" />`;
+
+        item.innerHTML = `
+            <div class="sidebar-item-name">
+                <input type="text" readonly value="${label}" style="text-align: left; color: #333;" />
+            </div>
+            <div class="sidebar-item-value-list">
+                <div class="sidebar-item-value" style="padding: 0;">
+                    ${inputHtml}
+                </div>
+            </div>
+        `;
+        return item;
+    }
+
+    renderStatus() {
+        const validation = this._settingsManager.validateLLMSettings();
+        const item = document.createElement('div');
+        item.className = 'sidebar-item';
+        item.innerHTML = `
+            <div class="sidebar-item-name">
+                <input type="text" readonly value="LLM 狀態" style="text-align: left; color: #333;" />
+            </div>
+            <div class="sidebar-item-value-list">
+                <div class="sidebar-item-value">
+                    <div class="sidebar-item-value-line" style="color: ${validation.valid ? '#059669' : '#dc2626'};">
+                        ${validation.valid ? '✓' : '✗'} ${validation.message}
+                    </div>
+                </div>
+            </div>
+        `;
+        return item;
+    }
+
+    renderActions() {
+        const actions = document.createElement('div');
+        actions.className = 'sidebar-section';
+        actions.innerHTML = `
+            <button id="settings-save" style="width: 100%; padding: 8px; margin-bottom: 8px; background: #2563eb; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                儲存設定
+            </button>
+            <button id="settings-reset" style="width: 100%; padding: 8px; background: #6b7280; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                重設為預設值
+            </button>
+        `;
+        this.element.appendChild(actions);
+    }
+
+    bindFormEvents() {
+        // 監聽所有輸入變更
+        const inputs = this.element.querySelectorAll('input[data-key], select[data-key]');
+        inputs.forEach((input) => {
+            let changeEvent = 'blur';
+            if (input.type === 'checkbox' || input.type === 'radio') {
+                changeEvent = 'change';
+            }
+            input.addEventListener(changeEvent, (e) => {
+                const key = e.target.dataset.key;
+                let value = null;
+
+                if (e.target.type === 'checkbox') {
+                    value = e.target.checked;
+                    // 更新顯示文字
+                    const label = e.target.nextSibling;
+                    if (label && label.nodeType === Node.TEXT_NODE) {
+                        label.textContent = value ? '已啟用' : '已停用';
+                    }
+                } else if (e.target.type === 'radio') {
+                    if (e.target.checked) {
+                        value = e.target.value;
+                    } else {
+                        return; // 只處理選中的 radio
+                    }
+                } else {
+                    value = e.target.value;
+                }
+
+                this._settingsManager.set(key, value);
+
+                // 重新渲染狀態
+                this.updateStatus();
+            });
+        });
+
+        // 儲存按鈕
+        const saveBtn = this.element.querySelector('#settings-save');
+        if (saveBtn) {
+            saveBtn.addEventListener('click', () => {
+                this.updateStatus();
+                // 顯示儲存成功訊息
+                const originalText = saveBtn.textContent;
+                saveBtn.textContent = '已儲存';
+                saveBtn.style.background = '#059669';
+                setTimeout(() => {
+                    saveBtn.textContent = originalText;
+                    saveBtn.style.background = '#2563eb';
+                }, 1000);
+            });
+        }
+
+        // 重設按鈕
+        const resetBtn = this.element.querySelector('#settings-reset');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                /* eslint-disable no-alert */
+                if (confirm('確定要重設所有設定為預設值嗎？')) {
+                /* eslint-enable no-alert */
+                    this._settingsManager.reset();
+                    this.render(); // 重新渲染整個表單
+                }
+            });
+        }
+    }
+
+    updateStatus() {
+        const statusElement = this.element.querySelector('.sidebar-item-value-line[style*="color"]');
+        if (statusElement) {
+            const validation = this._settingsManager.validateLLMSettings();
+            statusElement.style.color = validation.valid ? '#059669' : '#dc2626';
+            statusElement.textContent = `${validation.valid ? '✓' : '✗'} ${validation.message}`;
+        }
+    }
+};
+
+>>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
 view.Error = class extends Error {
 
     constructor(message) {

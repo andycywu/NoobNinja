@@ -302,9 +302,15 @@ app.Application = class {
         const promise = autoUpdater.checkForUpdates();
         if (promise) {
             promise.catch((error) => {
+<<<<<<< HEAD
+
+                console.log(error.message);
+
+=======
                 /* eslint-disable no-console */
                 console.log(error.message);
                 /* eslint-enable no-console */
+>>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
             });
         }
     }
@@ -1094,7 +1100,13 @@ try {
     global.application = new app.Application();
     await global.application.start();
 } catch (error) {
+<<<<<<< HEAD
+
+    console.error(error.message);
+
+=======
     /* eslint-disable no-console */
     console.error(error.message);
     /* eslint-enable no-console */
+>>>>>>> 4db1cef0 (chore: rebrand to NoobNinja; add docs and workflows; tidy README/docs)
 }
