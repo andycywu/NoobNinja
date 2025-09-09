@@ -1,16 +1,23 @@
 {
-    "name": "netron",
-    "productName": "Netron",
+    "name": "noobninja",
+    "productName": "NoobNinja",
     "author": {
-        "name": "Lutz Roeder",
-        "email": "lutzroeder@users.noreply.github.com",
-        "url": "https://www.lutzroeder.com"
+        "name": "AndyCy Wu",
+        "email": "andycywu@gmail.com",
+        "url": "https://github.com/andycywu"
     },
     "version": "8.5.3",
     "date": "2025-08-29 12:59:01",
-    "description": "Visualizer for neural network, deep learning, and machine learning models",
+    "description": "NoobNinja - 模型小白解碼器，基於 Netron 的 AI 模型可視化與解釋工具",
     "license": "MIT",
-    "repository": "lutzroeder/netron",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/andycywu/NoobNinja.git"
+    },
+    "homepage": "https://github.com/andycywu/NoobNinja#readme",
+    "bugs": {
+        "url": "https://github.com/andycywu/NoobNinja/issues"
+    },
     "type": "module",
     "main": "source/app.js",
     "scripts": {
