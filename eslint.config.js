@@ -95,7 +95,7 @@ export default [
             'no-duplicate-case': 'error',
             'no-duplicate-imports': 'error',
             'no-else-return': 'error',
-            'no-empty': 'error',
+            // 'no-empty' intentionally controlled later for autofix passes
             'no-empty-character-class': 'error',
             // 'no-empty-function': 'error',
             'no-empty-pattern': 'error',
@@ -194,7 +194,6 @@ export default [
             'no-useless-computed-key': 'error',
             'no-useless-concat': 'error',
             'no-useless-constructor': 'error',
-            'no-useless-escape': 'error',
             'no-useless-rename': 'error',
             'no-useless-return': 'error',
             'no-var': 'error',
