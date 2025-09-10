@@ -18,17 +18,14 @@ playwright.test('desktop', async () => {
     const electron = await playwright._electron;
     const args = ['.', '--no-sandbox'];
     const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'noobninja-'));
-    args.push(`--user-data-dir=${userDataDir}`);
     const app = await electron.launch({ args, userDataDir });
-    const page = await app.firstWindow();
+    const window = await app.firstWindow();
 
-    playwright.expect(page).toBeDefined();
-    await page.waitForLoadState('domcontentloaded');
-    await page.waitForSelector('body.welcome', { timeout: 5000 });
-    await page.waitForTimeout(1000);
+    playwright.expect(window).toBeDefined();
+    await window.waitForLoadState('domcontentloaded');
 
-    const consent = await page.locator('#message-button');
-    if (await consent.isVisible({ timeout: 2000 })) {
+    const consent = await window.locator('#message-button');
+    if (await consent.isVisible({ timeout: 2000 }).catch(() => false)) {
         await consent.click();
     }
 
@@ -42,8 +39,8 @@ playwright.test('desktop', async () => {
     }, file);
 
     // Wait for the graph to render
-    await page.waitForSelector('#canvas', { state: 'attached', timeout: 10000 });
-    await page.waitForSelector('body.default', { timeout: 10000 });
+    await window.waitForSelector('#canvas', { state: 'attached', timeout: 10000 });
+    await window.waitForSelector('body.default', { timeout: 10000 });
 
     // Open find sidebar
     await app.evaluate(async (electron) => {
@@ -53,18 +50,18 @@ playwright.test('desktop', async () => {
             window.webContents.send('find', {});
         }
     });
-    await page.waitForTimeout(500);
-    const search = await page.waitForSelector('#search', { state: 'visible', timeout: 5000 });
+    await window.waitForTimeout(500);
+    const search = await window.waitForSelector('#search', { state: 'visible', timeout: 5000 });
     playwright.expect(search).toBeDefined();
 
     // Find and activate tensor
     await search.fill('convolution1_W');
-    await page.waitForSelector('.sidebar-find-content li', { state: 'attached' });
-    const item = await page.waitForSelector('.sidebar-find-content li:has-text("convolution1_W")');
+    await window.waitForSelector('.sidebar-find-content li', { state: 'attached' });
+    const item = await window.waitForSelector('.sidebar-find-content li:has-text("convolution1_W")');
     await item.dblclick();
 
     // Expand the 'value' field
-    const valueEntry = await page.waitForSelector('#sidebar-content .sidebar-item:has(.sidebar-item-name input[value="value"])');
+    const valueEntry = await window.waitForSelector('#sidebar-content .sidebar-item:has(.sidebar-item-name input[value="value"])');
     const valueButton = await valueEntry.waitForSelector('.sidebar-item-value-button');
     await valueButton.click();
 

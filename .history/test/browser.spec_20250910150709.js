@@ -68,16 +68,6 @@ playwright.test('browser', async ({ page }) => {
     await page.waitForLoadState('domcontentloaded');
     console.log('DOM content loaded');
 
-    // If running in test-mode, immediately force default body to avoid welcome/consent race
-    try {
-        await page.evaluate(() => {
-            if (location && location.search && location.search.indexOf('test=1') !== -1) {
-                document.body.className = 'default';
-            }
-        });
-        console.log('Test-mode: forced body.className -> default immediately');
-    } catch {}
-
     // Forward browser page console messages to the Node test logs
     page.on('console', (msg) => {
         try {

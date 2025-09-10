@@ -30,25 +30,7 @@ playwright.test('browser', async ({ page }) => {
                 res.end('Not found');
                 return;
             }
-            // Set a sensible Content-Type based on file extension so module scripts load correctly
-            const ext = path.extname(filePath).toLowerCase();
-            const map = {
-                '.html': 'text/html; charset=utf-8',
-                '.htm': 'text/html; charset=utf-8',
-                '.js': 'application/javascript; charset=utf-8',
-                '.mjs': 'text/javascript; charset=utf-8',
-                '.css': 'text/css; charset=utf-8',
-                '.json': 'application/json; charset=utf-8',
-                '.png': 'image/png',
-                '.jpg': 'image/jpeg',
-                '.jpeg': 'image/jpeg',
-                '.svg': 'image/svg+xml',
-                '.ico': 'image/x-icon',
-                '.wasm': 'application/wasm'
-            };
-            const contentType = map[ext] || 'application/octet-stream';
             res.statusCode = 200;
-            res.setHeader('Content-Type', contentType);
             res.end(data);
         });
     });
@@ -68,16 +50,6 @@ playwright.test('browser', async ({ page }) => {
     await page.waitForLoadState('domcontentloaded');
     console.log('DOM content loaded');
 
-    // If running in test-mode, immediately force default body to avoid welcome/consent race
-    try {
-        await page.evaluate(() => {
-            if (location && location.search && location.search.indexOf('test=1') !== -1) {
-                document.body.className = 'default';
-            }
-        });
-        console.log('Test-mode: forced body.className -> default immediately');
-    } catch {}
-
     // Forward browser page console messages to the Node test logs
     page.on('console', (msg) => {
         try {
@@ -89,8 +61,9 @@ playwright.test('browser', async ({ page }) => {
     // then wait for the open-file button to be available. This is more robust
     // across different states where the welcome screen may be shown.
     try {
-        console.log('Checking for message button...');
-        const hasMessageButton = await page.$('#message-button');
+        
+    console.log('Checking for message button...');
+    const hasMessageButton = await page.$('#message-button');
         if (hasMessageButton) {
             // Trigger click via evaluate so it runs even if element is hidden
             await page.evaluate(() => {
@@ -126,9 +99,7 @@ playwright.test('browser', async ({ page }) => {
         // Fallback: if welcome screen didn't become ready, force default and set file input
         try {
             console.log('Fallback: forcing default body and pre-setting file input');
-            await page.evaluate(() => {
-                document.body.className = 'default';
-            });
+            await page.evaluate(() => { document.body.className = 'default'; });
             await page.setInputFiles('#open-file-dialog', file);
         } catch {
             // if fallback fails, rethrow original error

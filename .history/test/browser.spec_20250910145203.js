@@ -30,25 +30,7 @@ playwright.test('browser', async ({ page }) => {
                 res.end('Not found');
                 return;
             }
-            // Set a sensible Content-Type based on file extension so module scripts load correctly
-            const ext = path.extname(filePath).toLowerCase();
-            const map = {
-                '.html': 'text/html; charset=utf-8',
-                '.htm': 'text/html; charset=utf-8',
-                '.js': 'application/javascript; charset=utf-8',
-                '.mjs': 'text/javascript; charset=utf-8',
-                '.css': 'text/css; charset=utf-8',
-                '.json': 'application/json; charset=utf-8',
-                '.png': 'image/png',
-                '.jpg': 'image/jpeg',
-                '.jpeg': 'image/jpeg',
-                '.svg': 'image/svg+xml',
-                '.ico': 'image/x-icon',
-                '.wasm': 'application/wasm'
-            };
-            const contentType = map[ext] || 'application/octet-stream';
             res.statusCode = 200;
-            res.setHeader('Content-Type', contentType);
             res.end(data);
         });
     });
@@ -68,29 +50,14 @@ playwright.test('browser', async ({ page }) => {
     await page.waitForLoadState('domcontentloaded');
     console.log('DOM content loaded');
 
-    // If running in test-mode, immediately force default body to avoid welcome/consent race
-    try {
-        await page.evaluate(() => {
-            if (location && location.search && location.search.indexOf('test=1') !== -1) {
-                document.body.className = 'default';
-            }
-        });
-        console.log('Test-mode: forced body.className -> default immediately');
-    } catch {}
-
-    // Forward browser page console messages to the Node test logs
-    page.on('console', (msg) => {
-        try {
-            console.log('PAGE LOG:', msg.text());
-        } catch {}
-    });
-
     // Handle welcome/consent flow: try clicking the message button if present,
     // then wait for the open-file button to be available. This is more robust
     // across different states where the welcome screen may be shown.
     try {
-        console.log('Checking for message button...');
-        const hasMessageButton = await page.$('#message-button');
+        
+        
+    console.log('Checking for message button...');
+    const hasMessageButton = await page.$('#message-button');
         if (hasMessageButton) {
             // Trigger click via evaluate so it runs even if element is hidden
             await page.evaluate(() => {
@@ -100,19 +67,6 @@ playwright.test('browser', async ({ page }) => {
                 }
             }).catch(() => {});
             console.log('Clicked message button if present');
-            // If the welcome/message state still persists (some flows keep 'welcome message'),
-            // force the page into default state to proceed with tests.
-            try {
-                await page.evaluate(() => {
-                    const c = document.body.className || '';
-                    if (c.indexOf('welcome') !== -1 || c.indexOf('message') !== -1 || c.indexOf('notification') !== -1) {
-                        document.body.className = 'default';
-                    }
-                });
-                console.log('Forced body.className -> default if needed');
-            } catch {
-                // ignore
-            }
         }
 
         // Wait for the open-file button to become available
@@ -123,26 +77,19 @@ playwright.test('browser', async ({ page }) => {
         const bodyClass = await page.evaluate(() => document.body.className).catch(() => '<no-body>');
         console.log('Diagnostic: body.className =', bodyClass);
         await page.screenshot({ path: 'tmp/playwright-browser-diagnostic.png', fullPage: true }).catch(() => null);
-        // Fallback: if welcome screen didn't become ready, force default and set file input
-        try {
-            console.log('Fallback: forcing default body and pre-setting file input');
-            await page.evaluate(() => {
-                document.body.className = 'default';
-            });
-            await page.setInputFiles('#open-file-dialog', file);
-        } catch {
-            // if fallback fails, rethrow original error
-            throw new Error('welcome screen did not become ready in time');
-        }
+        throw new Error('welcome screen did not become ready in time');
     }
 
-    // Set file directly to hidden input to avoid filechooser UI
-    console.log('Setting file into #open-file-dialog via setInputFiles');
-    await page.setInputFiles('#open-file-dialog', file);
-    // Click the open button to trigger app open handling
+    // Set up file chooser promise before clicking
+    console.log('Setting up file chooser promise');
+    const fileChooserPromise = page.waitForEvent('filechooser');
     const openButton = await page.locator('.open-file-button, button:has-text("Open Model")');
     console.log('Clicking open file button');
     await openButton.click();
+    const fileChooser = await fileChooserPromise;
+    console.log('File chooser opened');
+    await fileChooser.setFiles(file);
+    console.log('File set into chooser');
 
     // Wait for the graph to render
     console.log('Waiting for canvas to render');

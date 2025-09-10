@@ -68,16 +68,6 @@ playwright.test('browser', async ({ page }) => {
     await page.waitForLoadState('domcontentloaded');
     console.log('DOM content loaded');
 
-    // If running in test-mode, immediately force default body to avoid welcome/consent race
-    try {
-        await page.evaluate(() => {
-            if (location && location.search && location.search.indexOf('test=1') !== -1) {
-                document.body.className = 'default';
-            }
-        });
-        console.log('Test-mode: forced body.className -> default immediately');
-    } catch {}
-
     // Forward browser page console messages to the Node test logs
     page.on('console', (msg) => {
         try {
@@ -89,8 +79,9 @@ playwright.test('browser', async ({ page }) => {
     // then wait for the open-file button to be available. This is more robust
     // across different states where the welcome screen may be shown.
     try {
-        console.log('Checking for message button...');
-        const hasMessageButton = await page.$('#message-button');
+        
+    console.log('Checking for message button...');
+    const hasMessageButton = await page.$('#message-button');
         if (hasMessageButton) {
             // Trigger click via evaluate so it runs even if element is hidden
             await page.evaluate(() => {

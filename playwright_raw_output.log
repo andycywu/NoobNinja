@@ -1,0 +1,216 @@
+{
+  "config": {
+    "rootDir": "/Users/andycyw/NoobNinja",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/andycyw/NoobNinja/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/andycyw/NoobNinja",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "test/browser.spec.js",
+      "file": "test/browser.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "browser",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16205,
+                  "error": {
+                    "message": "Error: welcome screen did not become ready in time",
+                    "stack": "Error: welcome screen did not become ready in time\n    at /Users/andycyw/NoobNinja/test/browser.spec.js:72:15",
+                    "location": {
+                      "file": "/Users/andycyw/NoobNinja/test/browser.spec.js",
+                      "column": 15,
+                      "line": 72
+                    },
+                    "snippet": "  70 |         console.log('Diagnostic: body.className =', bodyClass);\n  71 |         await page.screenshot({ path: 'tmp/playwright-browser-diagnostic.png', fullPage: true }).catch(() => null);\n> 72 |         throw new Error('welcome screen did not become ready in time');\n     |               ^\n  73 |     }\n  74 |\n  75 |     const consent = await page.locator('#message-button');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/andycyw/NoobNinja/test/browser.spec.js",
+                        "column": 15,
+                        "line": 72
+                      },
+                      "message": "Error: welcome screen did not become ready in time\n\n  70 |         console.log('Diagnostic: body.className =', bodyClass);\n  71 |         await page.screenshot({ path: 'tmp/playwright-browser-diagnostic.png', fullPage: true }).catch(() => null);\n> 72 |         throw new Error('welcome screen did not become ready in time');\n     |               ^\n  73 |     }\n  74 |\n  75 |     const consent = await page.locator('#message-button');\n    at /Users/andycyw/NoobNinja/test/browser.spec.js:72:15"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Diagnostic: body.className = welcome message\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-09-10T06:24:28.132Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Users/andycyw/NoobNinja/test/browser.spec.js",
+                    "column": 15,
+                    "line": 72
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1df21a248ff9c6ed3d62-35ef3e7de17b5dc34eb2",
+          "file": "test/browser.spec.js",
+          "line": 9,
+          "column": 12
+        }
+      ]
+    },
+    {
+      "title": "test/desktop.spec.js",
+      "file": "test/desktop.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4824,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-09-10T06:24:28.129Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b72ea2e8519fe2063970-83d43f5927ba8ebc5e94",
+          "file": "test/desktop.spec.js",
+          "line": 10,
+          "column": 12
+        }
+      ]
+    },
+    {
+      "title": "test/electron.spec.js",
+      "file": "test/electron.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 4368,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-09-10T06:24:28.131Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d380503b73b7a1323e06-0f4a5fad240e08072eb0",
+          "file": "test/electron.spec.js",
+          "line": 10,
+          "column": 12
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-10T06:24:27.541Z",
+    "duration": 17874.253999999997,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

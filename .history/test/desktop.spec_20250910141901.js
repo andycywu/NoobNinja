@@ -18,7 +18,6 @@ playwright.test('desktop', async () => {
     const electron = await playwright._electron;
     const args = ['.', '--no-sandbox'];
     const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'noobninja-'));
-    args.push(`--user-data-dir=${userDataDir}`);
     const app = await electron.launch({ args, userDataDir });
     const page = await app.firstWindow();
 

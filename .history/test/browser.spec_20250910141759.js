@@ -1,29 +1,50 @@
-
 import * as fs from 'fs';
 import * as path from 'path';
 import * as playwright from '@playwright/test';
-import * as os from 'os';
+import * as http from 'http';
 import * as url from 'url';
 
 playwright.test.setTimeout(120_000);
 
-playwright.test('desktop', async () => {
+playwright.test('browser', async ({ page }) => {
 
     const self = url.fileURLToPath(import.meta.url);
     const dir = path.dirname(self);
     const file = path.resolve(dir, '../third_party/test/onnx/candy.onnx');
     playwright.expect(fs.existsSync(file)).toBeTruthy();
 
-    // Launch app
-    const electron = await playwright._electron;
-    const args = ['.', '--no-sandbox'];
-    const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'noobninja-'));
-    args.push(`--user-data-dir=${userDataDir}`);
-    const app = await electron.launch({ args, userDataDir });
-    const page = await app.firstWindow();
+    // Start a temporary static server serving the `source` folder
+    // Minimal static file server (avoids extra dependencies)
+    const root = path.resolve(dir, '..', 'source');
+    const server = http.createServer((req, res) => {
+        const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+        const filePath = path.join(root, pathname === '/' ? '/index.html' : pathname);
+        if (!filePath.startsWith(root)) {
+            res.statusCode = 403;
+            res.end('Forbidden');
+            return;
+        }
+        fs.readFile(filePath, (err, data) => {
+            if (err) {
+                res.statusCode = 404;
+                res.end('Not found');
+                return;
+            }
+            res.statusCode = 200;
+            res.end(data);
+        });
+    });
+    await new Promise((resolve) => { server.listen(0, '127.0.0.1', resolve); });
+    const port = server.address().port;
+    const base = `http://127.0.0.1:${port}`;
+
+    // Navigate to the application
+    await page.goto(`${base}/index.html`);
 
     playwright.expect(page).toBeDefined();
     await page.waitForLoadState('domcontentloaded');
+
+    // Wait for the welcome screen to be ready
     await page.waitForSelector('body.welcome', { timeout: 5000 });
     await page.waitForTimeout(1000);
 
@@ -32,27 +53,20 @@ playwright.test('desktop', async () => {
         await consent.click();
     }
 
-    // Open the model
-    await app.evaluate(async (electron, location) => {
-        const windows = electron.BrowserWindow.getAllWindows();
-        if (windows.length > 0) {
-            const [window] = windows;
-            window.webContents.send('open', { path: location });
-        }
-    }, file);
+    // Set up file chooser promise before clicking
+    const fileChooserPromise = page.waitForEvent('filechooser');
+    const openButton = await page.locator('.open-file-button, button:has-text("Open Model")');
+    await openButton.click();
+    const fileChooser = await fileChooserPromise;
+    await fileChooser.setFiles(file);
 
     // Wait for the graph to render
     await page.waitForSelector('#canvas', { state: 'attached', timeout: 10000 });
     await page.waitForSelector('body.default', { timeout: 10000 });
 
     // Open find sidebar
-    await app.evaluate(async (electron) => {
-        const windows = electron.BrowserWindow.getAllWindows();
-        if (windows.length > 0) {
-            const [window] = windows;
-            window.webContents.send('find', {});
-        }
-    });
+    const isMac = process.platform === 'darwin';
+    await page.keyboard.press(isMac ? 'Meta+F' : 'Control+F');
     await page.waitForTimeout(500);
     const search = await page.waitForSelector('#search', { state: 'visible', timeout: 5000 });
     playwright.expect(search).toBeDefined();
@@ -76,5 +90,5 @@ playwright.test('desktop', async () => {
     const first = parseFloat(match[0]);
     playwright.expect(first).toBe(0.1353299617767334);
 
-    await app.close();
+    server.close();
 });

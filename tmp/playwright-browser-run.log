@@ -1,0 +1,43 @@
+
+Running 1 test using 1 worker
+
+Test server listening at http://127.0.0.1:57234
+Navigating to page...
+Page.goto returned
+DOM content loaded
+Test-mode: forced body.className -> default immediately
+Checking for message button...
+Clicked message button if present
+Open-file button available
+Setting file into #open-file-dialog via setInputFiles
+Clicking open file button
+Waiting for canvas to render
+  ✘  1 test/browser.spec.js:9:12 › browser (5.8s)
+
+
+  1) test/browser.spec.js:9:12 › browser ───────────────────────────────────────────────────────────
+
+    Error: page.waitForSelector: Target page, context or browser has been closed
+    Call log:
+    [2m  - waiting for locator('#canvas')[22m
+
+
+      147 |     // Wait for the graph to render
+      148 |     console.log('Waiting for canvas to render');
+    > 149 |     await page.waitForSelector('#canvas', { state: 'attached', timeout: 20000 });
+          |                ^
+      150 |     console.log('Canvas attached');
+      151 |     await page.waitForSelector('body.default', { timeout: 20000 });
+      152 |     console.log('Body is default');
+        at /Users/andycyw/NoobNinja/test/browser.spec.js:149:16
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/test-browser-browser/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/test-browser-browser/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    test/browser.spec.js:9:12 › browser ────────────────────────────────────────────────────────────
