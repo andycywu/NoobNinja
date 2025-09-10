@@ -1,0 +1,52 @@
+{
+    "name": "noobninja",
+    "productName": "NoobNinja",
+    "author": {
+        "name": "AndyCy Wu",
+        "email": "andycywu@gmail.com",
+        "url": "https://github.com/andycywu"
+    },
+    "version": "8.5.3",
+    "date": "2025-08-29 12:59:01",
+    "description": "NoobNinja - 模型小白解碼器，基於 Netron 的 AI 模型可視化與解釋工具",
+    "main": "source/app.js",
+    "scripts": {
+        "start": "node package.js start",
+        "server": "python package.py build start",
+        "clean": "node package.js clean",
+        "purge": "node package.js purge",
+        "install": "node package.js install",
+        "lint": "node package.js lint",
+        "build": "node package.js build",
+        "publish": "node package.js publish",
+        "version": "node package.js version",
+        "test": "node package.js test",
+        "validate": "node package.js validate",
+        "coverage": "node package.js coverage",
+        "analyze": "node package.js analyze",
+        "update": "node package.js update",
+        "pull": "node package.js pull"
+    },
+    "dependencies": {
+        "electron-updater": "6.6.2"
+    },
+    "devDependencies": {
+        "@electron/notarize": "3.0.2",
+        "@playwright/test": "1.55.0",
+        "electron": "37.4.0",
+        "electron-builder": "26.0.12",
+        "eslint": "9.34.0"
+    },
+    "build": {
+        "extends": "publish/electron-builder.json"
+    },
+    "config": {
+        "forge": "publish/forge.config.js"
+    },
+    "nyc": {
+        "reporter": "json",
+        "report-dir": "dist/nyc/report",
+        "temp-dir": "dist/nyc/.nyc_output"
+    },
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

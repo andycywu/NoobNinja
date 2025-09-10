@@ -1,0 +1,197 @@
+{
+  "generated": "2025-09-09T03:28:28.845Z",
+  "totalFiles": 114,
+  "top10": [
+    {
+      "file": "/Users/andycyw/NoobNinja/source/kmodel.js",
+      "totalProblems": 50,
+      "fixableCount": 50,
+      "topRules": [
+        {
+          "rule": "space-in-parens",
+          "count": 50
+        }
+      ],
+      "recommendation": "auto-try --fix for fixable issues, then manual review"
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/index.js",
+      "totalProblems": 45,
+      "fixableCount": 25,
+      "topRules": [
+        {
+          "rule": "no-var",
+          "count": 18
+        },
+        {
+          "rule": "vars-on-top",
+          "count": 15
+        },
+        {
+          "rule": "prefer-template",
+          "count": 4
+        },
+        {
+          "rule": "prefer-arrow-callback",
+          "count": 4
+        },
+        {
+          "rule": "prefer-destructuring",
+          "count": 1
+        }
+      ],
+      "recommendation": "auto-try --fix for fixable issues, then manual review"
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/python.js",
+      "totalProblems": 30,
+      "fixableCount": 2,
+      "topRules": [
+        {
+          "rule": "no-multi-assign",
+          "count": 16
+        },
+        {
+          "rule": "consistent-this",
+          "count": 5
+        },
+        {
+          "rule": "no-constructor-return",
+          "count": 3
+        },
+        {
+          "rule": "no-misleading-character-class",
+          "count": 2
+        },
+        {
+          "rule": "no-undef-init",
+          "count": 2
+        }
+      ],
+      "recommendation": "auto-try --fix for fixable issues, then manual review",
+      "notes": "Contains rules that typically require manual inspection: no-constructor-return"
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/view.js",
+      "totalProblems": 24,
+      "fixableCount": 0,
+      "topRules": [
+        {
+          "rule": "no-control-regex",
+          "count": 16
+        },
+        {
+          "rule": "no-await-in-loop",
+          "count": 7
+        },
+        {
+          "rule": "no-unused-expressions",
+          "count": 1
+        }
+      ],
+      "recommendation": "manual review required",
+      "notes": "Contains rules that typically require manual inspection: no-control-regex, no-await-in-loop"
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/pytorch.js",
+      "totalProblems": 14,
+      "fixableCount": 0,
+      "topRules": [
+        {
+          "rule": "no-await-in-loop",
+          "count": 7
+        },
+        {
+          "rule": "prefer-destructuring",
+          "count": 6
+        },
+        {
+          "rule": "consistent-this",
+          "count": 1
+        }
+      ],
+      "recommendation": "manual review required",
+      "notes": "Contains rules that typically require manual inspection: no-await-in-loop"
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/base.js",
+      "totalProblems": 13,
+      "fixableCount": 0,
+      "topRules": [
+        {
+          "rule": "no-extend-native",
+          "count": 13
+        }
+      ],
+      "recommendation": "manual review required",
+      "notes": "Contains rules that typically require manual inspection: no-extend-native"
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/acuity.js",
+      "totalProblems": 7,
+      "fixableCount": 0,
+      "topRules": [
+        {
+          "rule": "no-unused-vars",
+          "count": 5
+        },
+        {
+          "rule": "prefer-destructuring",
+          "count": 2
+        }
+      ],
+      "recommendation": "manual review required"
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/keras.js",
+      "totalProblems": 4,
+      "fixableCount": 0,
+      "topRules": [
+        {
+          "rule": "no-await-in-loop",
+          "count": 2
+        },
+        {
+          "rule": "no-use-before-define",
+          "count": 1
+        },
+        {
+          "rule": "prefer-destructuring",
+          "count": 1
+        }
+      ],
+      "recommendation": "manual review required",
+      "notes": "Contains rules that typically require manual inspection: no-await-in-loop"
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/onnx.js",
+      "totalProblems": 4,
+      "fixableCount": 0,
+      "topRules": [
+        {
+          "rule": "no-use-before-define",
+          "count": 3
+        },
+        {
+          "rule": "no-await-in-loop",
+          "count": 1
+        }
+      ],
+      "recommendation": "manual review required",
+      "notes": "Contains rules that typically require manual inspection: no-await-in-loop"
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/executorch.js",
+      "totalProblems": 3,
+      "fixableCount": 0,
+      "topRules": [
+        {
+          "rule": "no-await-in-loop",
+          "count": 3
+        }
+      ],
+      "recommendation": "manual review required",
+      "notes": "Contains rules that typically require manual inspection: no-await-in-loop"
+    }
+  ]
+}

@@ -302,9 +302,9 @@ app.Application = class {
         const promise = autoUpdater.checkForUpdates();
         if (promise) {
             promise.catch((error) => {
-                /* eslint-disable no-console */
+
                 console.log(error.message);
-                /* eslint-enable no-console */
+
             });
         }
     }
@@ -1094,7 +1094,7 @@ try {
     global.application = new app.Application();
     await global.application.start();
 } catch (error) {
-    /* eslint-disable no-console */
+
     console.error(error.message);
-    /* eslint-enable no-console */
+
 }
