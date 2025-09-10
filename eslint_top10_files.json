@@ -1,0 +1,3992 @@
+{
+  "totalFiles": 114,
+  "top10": [
+    {
+      "file": "/Users/andycyw/NoobNinja/source/kmodel.js",
+      "problems": 50,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 281,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 281,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              9500,
+              9503
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 282,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 282,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              9542,
+              9546
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 283,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 283,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              9586,
+              9590
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 284,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 284,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              9626,
+              9630
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 285,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 285,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              9676,
+              9680
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 286,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 286,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              9738,
+              9742
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 287,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 287,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              9810,
+              9814
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 294,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 294,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              10208,
+              10212
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 295,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 295,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              10284,
+              10288
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 296,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 296,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              10339,
+              10343
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 306,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 306,
+          "endColumn": 30,
+          "fix": {
+            "range": [
+              11052,
+              11056
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 307,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 307,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              11111,
+              11114
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 308,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 308,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              11180,
+              11183
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 316,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 316,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              11604,
+              11607
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 324,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 324,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              12030,
+              12033
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 331,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 331,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              12405,
+              12408
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 332,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 332,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              12475,
+              12478
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 338,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 338,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              12808,
+              12811
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 349,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 349,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              13355,
+              13358
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 360,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 360,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              13912,
+              13915
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 381,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 381,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              15325,
+              15328
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 382,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 382,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              15396,
+              15399
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 390,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 390,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              15889,
+              15892
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 398,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 398,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              16392,
+              16395
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 407,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 407,
+          "endColumn": 29,
+          "fix": {
+            "range": [
+              16953,
+              16956
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 416,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 416,
+          "endColumn": 27,
+          "fix": {
+            "range": [
+              17524,
+              17525
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 417,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 417,
+          "endColumn": 27,
+          "fix": {
+            "range": [
+              17574,
+              17575
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 418,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 418,
+          "endColumn": 27,
+          "fix": {
+            "range": [
+              17626,
+              17627
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 419,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 419,
+          "endColumn": 27,
+          "fix": {
+            "range": [
+              17689,
+              17690
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 578,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 578,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              26770,
+              26772
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 590,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 590,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              27459,
+              27461
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 604,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 604,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              28207,
+              28209
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 642,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 642,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              30204,
+              30206
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 648,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 648,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              30533,
+              30535
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 667,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 667,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              31529,
+              31531
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 674,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 674,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              31949,
+              31951
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 680,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 680,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              32276,
+              32278
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 688,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 688,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              32770,
+              32772
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 704,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 704,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              33710,
+              33712
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 708,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 708,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              33933,
+              33935
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 718,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 718,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              34519,
+              34521
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 719,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 719,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              34578,
+              34580
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 725,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 725,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              34946,
+              34948
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 726,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 726,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              35007,
+              35009
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 731,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 731,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              35282,
+              35284
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 759,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 759,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              36929,
+              36931
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 779,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 779,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              37972,
+              37974
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 799,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 799,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              39104,
+              39106
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 803,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 803,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              39357,
+              39359
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "space-in-parens",
+          "severity": 2,
+          "message": "There should be no space after this paren.",
+          "line": 804,
+          "column": 26,
+          "nodeType": "Program",
+          "messageId": "rejectedOpeningSpace",
+          "endLine": 804,
+          "endColumn": 28,
+          "fix": {
+            "range": [
+              39420,
+              39422
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/index.js",
+      "problems": 45,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 13,
+          "column": 5,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 13,
+          "endColumn": 44,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-template",
+          "severity": 2,
+          "message": "Unexpected string concatenation.",
+          "line": 16,
+          "column": 63,
+          "nodeType": "BinaryExpression",
+          "messageId": "unexpectedStringConcatenation",
+          "endLine": 16,
+          "endColumn": 73,
+          "fix": {
+            "range": [
+              532,
+              542
+            ],
+            "text": "`${base  }/`"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 17,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 17,
+          "endColumn": 33,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 17,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 17,
+          "endColumn": 33,
+          "fix": {
+            "range": [
+              548,
+              551
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-template",
+          "severity": 2,
+          "message": "Unexpected string concatenation.",
+          "line": 17,
+          "column": 15,
+          "nodeType": "BinaryExpression",
+          "messageId": "unexpectedStringConcatenation",
+          "endLine": 17,
+          "endColumn": 32,
+          "fix": {
+            "range": [
+              558,
+              575
+            ],
+            "text": "`${base + id  }.js`"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 18,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 18,
+          "endColumn": 64,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 18,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 18,
+          "endColumn": 64,
+          "fix": {
+            "range": [
+              581,
+              584
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 19,
+          "column": 10,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 19,
+          "endColumn": 19,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 19,
+          "column": 10,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 19,
+          "endColumn": 19,
+          "fix": {
+            "range": [
+              650,
+              653
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-template",
+          "severity": 2,
+          "message": "Unexpected string concatenation.",
+          "line": 21,
+          "column": 29,
+          "nodeType": "BinaryExpression",
+          "messageId": "unexpectedStringConcatenation",
+          "endLine": 21,
+          "endColumn": 65,
+          "fix": {
+            "range": [
+              770,
+              806
+            ],
+            "text": "`Duplicate import of '${  url  }'.`"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 24,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 24,
+          "endColumn": 51,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 24,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 24,
+          "endColumn": 51,
+          "fix": {
+            "range": [
+              829,
+              832
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 28,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 32,
+          "endColumn": 7,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 28,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 32,
+          "endColumn": 7,
+          "fix": {
+            "range": [
+              1004,
+              1007
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-use-before-define",
+          "severity": 2,
+          "message": "'errorHandler' was used before it was defined.",
+          "line": 30,
+          "column": 45,
+          "nodeType": "Identifier",
+          "messageId": "usedBeforeDefined",
+          "endLine": 30,
+          "endColumn": 57,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 33,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 37,
+          "endColumn": 7,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 33,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 37,
+          "endColumn": 7,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-template",
+          "severity": 2,
+          "message": "Unexpected string concatenation.",
+          "line": 36,
+          "column": 34,
+          "nodeType": "BinaryExpression",
+          "messageId": "unexpectedStringConcatenation",
+          "endLine": 36,
+          "endColumn": 85,
+          "fix": {
+            "range": [
+              1364,
+              1415
+            ],
+            "text": "`The script '${  e.target.src  }' failed to load.`"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 46,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 50,
+          "endColumn": 7,
+          "fix": {
+            "range": [
+              1717,
+              1720
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 51,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 72,
+          "endColumn": 7,
+          "fix": {
+            "range": [
+              1909,
+              1912
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 55,
+          "column": 13,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 55,
+          "endColumn": 37,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 55,
+          "column": 13,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 55,
+          "endColumn": 37,
+          "fix": {
+            "range": [
+              2022,
+              2025
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 57,
+          "column": 13,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 57,
+          "endColumn": 39,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 57,
+          "column": 13,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 57,
+          "endColumn": 39,
+          "fix": {
+            "range": [
+              2105,
+              2108
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 58,
+          "column": 18,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 58,
+          "endColumn": 27,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 58,
+          "column": 18,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 58,
+          "endColumn": 27,
+          "fix": {
+            "range": [
+              2149,
+              2152
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-loop-func",
+          "severity": 2,
+          "message": "Function declared in a loop contains unsafe references to variable(s) 'resolved'.",
+          "line": 59,
+          "column": 48,
+          "nodeType": "FunctionExpression",
+          "messageId": "unsafeRefs",
+          "endLine": 68,
+          "endColumn": 18,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-arrow-callback",
+          "severity": 2,
+          "message": "Unexpected function expression.",
+          "line": 59,
+          "column": 48,
+          "nodeType": "FunctionExpression",
+          "messageId": "preferArrowCallback",
+          "endLine": 68,
+          "endColumn": 18,
+          "fix": {
+            "range": [
+              2230,
+              2253
+            ],
+            "text": "(module, error) =>"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 78,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 78,
+          "endColumn": 60,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 78,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 78,
+          "endColumn": 60,
+          "fix": {
+            "range": [
+              2759,
+              2762
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 1,
+          "message": "'error' is defined but never used.",
+          "line": 86,
+          "column": 18,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 86,
+          "endColumn": 23,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-arrow-callback",
+          "severity": 2,
+          "message": "Unexpected function expression.",
+          "line": 93,
+          "column": 34,
+          "nodeType": "FunctionExpression",
+          "messageId": "preferArrowCallback",
+          "endLine": 96,
+          "endColumn": 2,
+          "fix": {
+            "range": [
+              3241,
+              3257
+            ],
+            "text": "(event) =>"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 94,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 94,
+          "endColumn": 182,
+          "fix": {
+            "range": [
+              3264,
+              3267
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-arrow-callback",
+          "severity": 2,
+          "message": "Unexpected function expression.",
+          "line": 98,
+          "column": 33,
+          "nodeType": "FunctionExpression",
+          "messageId": "preferArrowCallback",
+          "endLine": 121,
+          "endColumn": 2,
+          "fix": {
+            "range": [
+              3524,
+              3534
+            ],
+            "text": "() =>"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 103,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 103,
+          "endColumn": 41,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 103,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 103,
+          "endColumn": 41,
+          "fix": {
+            "range": [
+              3886,
+              3889
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 104,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 104,
+          "endColumn": 55,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 104,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 104,
+          "endColumn": 55,
+          "fix": {
+            "range": [
+              3927,
+              3930
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 105,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 105,
+          "endColumn": 53,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 105,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 105,
+          "endColumn": 53,
+          "fix": {
+            "range": [
+              3982,
+              3985
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 106,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 106,
+          "endColumn": 51,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 106,
+          "column": 5,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 106,
+          "endColumn": 51,
+          "fix": {
+            "range": [
+              4035,
+              4038
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-arrow-callback",
+          "severity": 2,
+          "message": "Unexpected function expression.",
+          "line": 112,
+          "column": 28,
+          "nodeType": "FunctionExpression",
+          "messageId": "preferArrowCallback",
+          "endLine": 120,
+          "endColumn": 6,
+          "fix": {
+            "range": [
+              4399,
+              4421
+            ],
+            "text": "(value, error) =>"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "vars-on-top",
+          "severity": 2,
+          "message": "All 'var' declarations must be at the top of the function scope.",
+          "line": 116,
+          "column": 13,
+          "nodeType": "VariableDeclaration",
+          "messageId": "top",
+          "endLine": 116,
+          "endColumn": 58,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-var",
+          "severity": 2,
+          "message": "Unexpected var, use let or const instead.",
+          "line": 116,
+          "column": 13,
+          "nodeType": "VariableDeclaration",
+          "messageId": "unexpectedVar",
+          "endLine": 116,
+          "endColumn": 58,
+          "fix": {
+            "range": [
+              4527,
+              4530
+            ],
+            "text": "let"
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/python.js",
+      "problems": 30,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "consistent-this",
+          "severity": 2,
+          "message": "Unexpected alias 'self' for 'this'.",
+          "line": 10,
+          "column": 15,
+          "nodeType": "VariableDeclarator",
+          "messageId": "unexpectedAlias",
+          "endLine": 10,
+          "endColumn": 26,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-constructor-return",
+          "severity": 2,
+          "message": "Unexpected return statement in constructor.",
+          "line": 88,
+          "column": 25,
+          "nodeType": "ReturnStatement",
+          "messageId": "unexpected",
+          "endLine": 88,
+          "endColumn": 50,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-constructor-return",
+          "severity": 2,
+          "message": "Unexpected return statement in constructor.",
+          "line": 93,
+          "column": 25,
+          "nodeType": "ReturnStatement",
+          "messageId": "unexpected",
+          "endLine": 93,
+          "endColumn": 46,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-constructor-return",
+          "severity": 2,
+          "message": "Unexpected return statement in constructor.",
+          "line": 106,
+          "column": 21,
+          "nodeType": "ReturnStatement",
+          "messageId": "unexpected",
+          "endLine": 106,
+          "endColumn": 32,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-misleading-character-class",
+          "severity": 2,
+          "message": "Unexpected combined character in character class.",
+          "line": 1723,
+          "column": 65,
+          "nodeType": "TemplateLiteral",
+          "messageId": "combiningClass",
+          "endLine": 1723,
+          "endColumn": 110,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-misleading-character-class",
+          "severity": 2,
+          "message": "Unexpected joined character sequence in character class.",
+          "line": 1723,
+          "column": 65,
+          "nodeType": "TemplateLiteral",
+          "messageId": "zwj",
+          "endLine": 1723,
+          "endColumn": 110,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "guard-for-in",
+          "severity": 2,
+          "message": "The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype.",
+          "line": 3969,
+          "column": 33,
+          "nodeType": "ForInStatement",
+          "messageId": "wrap",
+          "endLine": 3971,
+          "endColumn": 34,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-undef-init",
+          "severity": 2,
+          "message": "It's not necessary to initialize 'default_value' to undefined.",
+          "line": 10352,
+          "column": 21,
+          "nodeType": "VariableDeclarator",
+          "messageId": "unnecessaryUndefinedInit",
+          "endLine": 10352,
+          "endColumn": 46,
+          "fix": {
+            "range": [
+              530956,
+              530968
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-undef-init",
+          "severity": 2,
+          "message": "It's not necessary to initialize 'value' to undefined.",
+          "line": 10373,
+          "column": 21,
+          "nodeType": "VariableDeclarator",
+          "messageId": "unnecessaryUndefinedInit",
+          "endLine": 10373,
+          "endColumn": 38,
+          "fix": {
+            "range": [
+              531815,
+              531827
+            ],
+            "text": ""
+          },
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 12923,
+          "column": 21,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 12923,
+          "endColumn": 39,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "consistent-this",
+          "severity": 2,
+          "message": "Unexpected alias 'runner' for 'this'.",
+          "line": 13258,
+          "column": 21,
+          "nodeType": "VariableDeclarator",
+          "messageId": "unexpectedAlias",
+          "endLine": 13258,
+          "endColumn": 34,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "consistent-this",
+          "severity": 2,
+          "message": "Unexpected alias 'self' for 'this'.",
+          "line": 13295,
+          "column": 23,
+          "nodeType": "VariableDeclarator",
+          "messageId": "unexpectedAlias",
+          "endLine": 13295,
+          "endColumn": 34,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "consistent-this",
+          "severity": 2,
+          "message": "Unexpected alias 'self' for 'this'.",
+          "line": 16909,
+          "column": 23,
+          "nodeType": "VariableDeclarator",
+          "messageId": "unexpectedAlias",
+          "endLine": 16909,
+          "endColumn": 34,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19606,
+          "column": 23,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19606,
+          "endColumn": 79,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19607,
+          "column": 22,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19607,
+          "endColumn": 77,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19608,
+          "column": 23,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19608,
+          "endColumn": 80,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19609,
+          "column": 23,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19609,
+          "endColumn": 78,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19610,
+          "column": 23,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19610,
+          "endColumn": 79,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19611,
+          "column": 25,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19611,
+          "endColumn": 83,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19612,
+          "column": 25,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19612,
+          "endColumn": 84,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19613,
+          "column": 25,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19613,
+          "endColumn": 85,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19614,
+          "column": 27,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19614,
+          "endColumn": 94,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19615,
+          "column": 27,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19615,
+          "endColumn": 95,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19616,
+          "column": 28,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19616,
+          "endColumn": 100,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19617,
+          "column": 22,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19617,
+          "endColumn": 81,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19618,
+          "column": 23,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19618,
+          "endColumn": 81,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19619,
+          "column": 24,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19619,
+          "endColumn": 84,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19620,
+          "column": 24,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19620,
+          "endColumn": 84,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-multi-assign",
+          "severity": 2,
+          "message": "Unexpected chained assignment.",
+          "line": 19621,
+          "column": 26,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpectedChain",
+          "endLine": 19621,
+          "endColumn": 90,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "consistent-this",
+          "severity": 2,
+          "message": "Unexpected alias 'self' for 'this'.",
+          "line": 20117,
+          "column": 19,
+          "nodeType": "VariableDeclarator",
+          "messageId": "unexpectedAlias",
+          "endLine": 20117,
+          "endColumn": 30,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/view.js",
+      "problems": 24,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "no-unused-expressions",
+          "severity": 2,
+          "message": "Expected an assignment or function call and instead saw an expression.",
+          "line": 1906,
+          "column": 17,
+          "nodeType": "ExpressionStatement",
+          "messageId": "unusedExpression",
+          "endLine": 1906,
+          "endColumn": 37,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x1f.",
+          "line": 4761,
+          "column": 32,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 4761,
+          "endColumn": 225,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x1f.",
+          "line": 4762,
+          "column": 28,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 4762,
+          "endColumn": 209,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x0a, \\x19.",
+          "line": 6231,
+          "column": 450,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6231,
+          "endColumn": 506,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x08, \\x00, \\x10, \\x12, \\x00.",
+          "line": 6232,
+          "column": 227,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6232,
+          "endColumn": 264,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x08, \\x00, \\x10, \\x12, \\x00, \\x1a.",
+          "line": 6232,
+          "column": 266,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6232,
+          "endColumn": 296,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x08, \\x00, \\x10.",
+          "line": 6232,
+          "column": 298,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6232,
+          "endColumn": 320,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x1a.",
+          "line": 6241,
+          "column": 238,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6241,
+          "endColumn": 258,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x00.",
+          "line": 6292,
+          "column": 98,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6292,
+          "endColumn": 111,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 6672,
+          "column": 29,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 6672,
+          "endColumn": 56,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 6673,
+          "column": 26,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 6673,
+          "endColumn": 54,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 6681,
+          "column": 35,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 6681,
+          "endColumn": 62,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 6735,
+          "column": 41,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 6735,
+          "endColumn": 68,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 6736,
+          "column": 38,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 6736,
+          "endColumn": 66,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x01, \\x02, \\x00.",
+          "line": 6831,
+          "column": 50,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6831,
+          "endColumn": 71,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x05, \\x16, \\x07.",
+          "line": 6832,
+          "column": 52,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6832,
+          "endColumn": 71,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x00, \\x00, \\x00, \\x00, \\x00, \\x00, \\x00, \\x00, \\x00, \\x00, \\x00, \\x00, \\x00.",
+          "line": 6849,
+          "column": 55,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6849,
+          "endColumn": 128,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x08, \\x03.",
+          "line": 6860,
+          "column": 57,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6860,
+          "endColumn": 69,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x0f, \\x00, \\x00.",
+          "line": 6865,
+          "column": 57,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6865,
+          "endColumn": 87,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x00, \\x00, \\x00, \\x00, \\x00.",
+          "line": 6866,
+          "column": 55,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6866,
+          "endColumn": 84,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x00, \\x00, \\x00, \\x00, \\x00.",
+          "line": 6868,
+          "column": 47,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6868,
+          "endColumn": 76,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-control-regex",
+          "severity": 2,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x00, \\x00, \\x00, \\x00.",
+          "line": 6870,
+          "column": 45,
+          "nodeType": "Literal",
+          "messageId": "unexpected",
+          "endLine": 6870,
+          "endColumn": 77,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 6894,
+          "column": 25,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 6894,
+          "endColumn": 55,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 6896,
+          "column": 25,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 6896,
+          "endColumn": 70,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/pytorch.js",
+      "problems": 14,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 985,
+          "column": 31,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 985,
+          "endColumn": 55,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 1431,
+          "column": 35,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 1431,
+          "endColumn": 88,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 1432,
+          "column": 39,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 1432,
+          "endColumn": 91,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 1433,
+          "column": 43,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 1433,
+          "endColumn": 99,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 1434,
+          "column": 37,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 1434,
+          "endColumn": 87,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 1435,
+          "column": 46,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 1435,
+          "endColumn": 70,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 1480,
+          "column": 29,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 1480,
+          "endColumn": 53,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "consistent-this",
+          "severity": 2,
+          "message": "Unexpected alias 'execution' for 'this'.",
+          "line": 1535,
+          "column": 15,
+          "nodeType": "VariableDeclarator",
+          "messageId": "unexpectedAlias",
+          "endLine": 1535,
+          "endColumn": 31,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 1595,
+          "column": 17,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 1595,
+          "endColumn": 41,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 1596,
+          "column": 17,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 1596,
+          "endColumn": 43,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 1601,
+          "column": 17,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 1601,
+          "endColumn": 47,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 1614,
+          "column": 17,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 1614,
+          "endColumn": 41,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 1615,
+          "column": 17,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 1615,
+          "endColumn": 43,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 1620,
+          "column": 17,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 1620,
+          "endColumn": 47,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/base.js",
+      "problems": 13,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "BigInt prototype is read only, properties should not be added.",
+          "line": 34,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 39,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 42,
+          "column": 5,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 54,
+          "endColumn": 6,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 64,
+          "column": 5,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 72,
+          "endColumn": 6,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 99,
+          "column": 5,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 106,
+          "endColumn": 6,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 114,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 118,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 122,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 162,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 166,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 210,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 212,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 227,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 229,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 240,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 242,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 246,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 248,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 256,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 258,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 262,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-extend-native",
+          "severity": 2,
+          "message": "DataView prototype is read only, properties should not be added.",
+          "line": 264,
+          "column": 1,
+          "nodeType": "AssignmentExpression",
+          "messageId": "unexpected",
+          "endLine": 272,
+          "endColumn": 2,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/acuity.js",
+      "problems": 7,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 559,
+          "column": 13,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 559,
+          "endColumn": 45,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 560,
+          "column": 13,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 560,
+          "endColumn": 45,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 1,
+          "message": "'params' is defined but never used.",
+          "line": 578,
+          "column": 46,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 578,
+          "endColumn": 52,
+          "suggestions": [
+            {
+              "messageId": "removeVar",
+              "data": {
+                "varName": "params"
+              },
+              "fix": {
+                "range": [
+                  24738,
+                  24746
+                ],
+                "text": ""
+              },
+              "desc": "Remove unused variable 'params'."
+            }
+          ],
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 1,
+          "message": "'params' is defined but never used.",
+          "line": 581,
+          "column": 48,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 581,
+          "endColumn": 54,
+          "suggestions": [
+            {
+              "messageId": "removeVar",
+              "data": {
+                "varName": "params"
+              },
+              "fix": {
+                "range": [
+                  24851,
+                  24859
+                ],
+                "text": ""
+              },
+              "desc": "Remove unused variable 'params'."
+            }
+          ],
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 1,
+          "message": "'inputs' is defined but never used.",
+          "line": 584,
+          "column": 32,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 584,
+          "endColumn": 38,
+          "suggestions": [
+            {
+              "messageId": "removeVar",
+              "data": {
+                "varName": "inputs"
+              },
+              "fix": {
+                "range": [
+                  24979,
+                  24986
+                ],
+                "text": ""
+              },
+              "desc": "Remove unused variable 'inputs'."
+            }
+          ],
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 1,
+          "message": "'params' is defined but never used.",
+          "line": 584,
+          "column": 40,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 584,
+          "endColumn": 46,
+          "suggestions": [
+            {
+              "messageId": "removeVar",
+              "data": {
+                "varName": "params"
+              },
+              "fix": {
+                "range": [
+                  24985,
+                  24993
+                ],
+                "text": ""
+              },
+              "desc": "Remove unused variable 'params'."
+            }
+          ],
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 1,
+          "message": "'name' is assigned a value but never used.",
+          "line": 631,
+          "column": 29,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 631,
+          "endColumn": 33,
+          "suggestions": [
+            {
+              "messageId": "removeVar",
+              "data": {
+                "varName": "name"
+              },
+              "fix": {
+                "range": [
+                  26929,
+                  26933
+                ],
+                "text": ""
+              },
+              "desc": "Remove unused variable 'name'."
+            }
+          ],
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/keras.js",
+      "problems": 4,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "no-use-before-define",
+          "severity": 2,
+          "message": "'_load_container_state' was used before it was defined.",
+          "line": 112,
+          "column": 17,
+          "nodeType": "Identifier",
+          "messageId": "usedBeforeDefined",
+          "endLine": 112,
+          "endColumn": 38,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 203,
+          "column": 31,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 203,
+          "endColumn": 56,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 210,
+          "column": 33,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 210,
+          "endColumn": 57,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "prefer-destructuring",
+          "severity": 2,
+          "message": "Use array destructuring.",
+          "line": 660,
+          "column": 41,
+          "nodeType": "AssignmentExpression",
+          "messageId": "preferDestructuring",
+          "endLine": 660,
+          "endColumn": 63,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/onnx.js",
+      "problems": 4,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 26,
+          "column": 32,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 26,
+          "endColumn": 57,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-use-before-define",
+          "severity": 2,
+          "message": "'graph' was used before it was defined.",
+          "line": 1858,
+          "column": 21,
+          "nodeType": "Identifier",
+          "messageId": "usedBeforeDefined",
+          "endLine": 1858,
+          "endColumn": 26,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-use-before-define",
+          "severity": 2,
+          "message": "'type' was used before it was defined.",
+          "line": 1880,
+          "column": 27,
+          "nodeType": "Identifier",
+          "messageId": "usedBeforeDefined",
+          "endLine": 1880,
+          "endColumn": 31,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-use-before-define",
+          "severity": 2,
+          "message": "'type' was used before it was defined.",
+          "line": 1884,
+          "column": 32,
+          "nodeType": "Identifier",
+          "messageId": "usedBeforeDefined",
+          "endLine": 1884,
+          "endColumn": 36,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/executorch.js",
+      "problems": 3,
+      "messages": [],
+      "suppressed": [
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 385,
+          "column": 25,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 385,
+          "endColumn": 54,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 933,
+          "column": 26,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 933,
+          "endColumn": 54,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "ruleId": "no-await-in-loop",
+          "severity": 2,
+          "message": "Unexpected `await` inside a loop.",
+          "line": 937,
+          "column": 31,
+          "nodeType": "AwaitExpression",
+          "messageId": "unexpectedAwait",
+          "endLine": 937,
+          "endColumn": 58,
+          "suppressions": [
+            {
+              "kind": "directive",
+              "justification": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

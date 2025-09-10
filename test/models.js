@@ -29,12 +29,12 @@ const access = async (path) => {
 };
 
 const exit = (error) => {
-    /* eslint-disable no-console */
+
     console.error(`${error.name}: ${error.message}`);
     if (error.cause) {
         console.error(`  ${error.cause.name}: ${error.cause.message}`);
     }
-    /* eslint-enable no-console */
+
     process.exit(1);
 };
 
@@ -297,9 +297,9 @@ const main = async () => {
             await new Promise((resolve, reject) => {
                 session.post('Profiler.start', (error) => error ? reject(error) : resolve());
             });
-            /* eslint-disable no-console */
+
             console.profile();
-            /* eslint-enable no-console */
+
         }
         if (threads === 1) {
             const worker = await import('./worker.js');
@@ -340,9 +340,9 @@ const main = async () => {
             write('\n');
         }
         if (args.profile) {
-            /* eslint-disable no-console */
+
             console.profileEnd();
-            /* eslint-enable no-console */
+
             const data = await new Promise((resolve, reject) => {
                 session.post('Profiler.stop', (error, data) => error ? reject(error) : resolve(data));
             });

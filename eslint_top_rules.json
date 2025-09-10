@@ -1,0 +1,443 @@
+{
+  "totalRules": 21,
+  "topRules": [
+    {
+      "rule": "space-in-parens",
+      "count": 50,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/kmodel.js",
+          "line": 281,
+          "column": 26,
+          "message": "There should be no space after this paren."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/kmodel.js",
+          "line": 282,
+          "column": 26,
+          "message": "There should be no space after this paren."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/kmodel.js",
+          "line": 283,
+          "column": 26,
+          "message": "There should be no space after this paren."
+        }
+      ]
+    },
+    {
+      "rule": "no-await-in-loop",
+      "count": 24,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/browser.js",
+          "line": 64,
+          "column": 21,
+          "message": "Unexpected `await` inside a loop."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/caffe2.js",
+          "line": 112,
+          "column": 39,
+          "message": "Unexpected `await` inside a loop."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/desktop.mjs",
+          "line": 91,
+          "column": 21,
+          "message": "Unexpected `await` inside a loop."
+        }
+      ]
+    },
+    {
+      "rule": "no-var",
+      "count": 18,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 17,
+          "column": 5,
+          "message": "Unexpected var, use let or const instead."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 18,
+          "column": 5,
+          "message": "Unexpected var, use let or const instead."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 19,
+          "column": 10,
+          "message": "Unexpected var, use let or const instead."
+        }
+      ]
+    },
+    {
+      "rule": "no-control-regex",
+      "count": 18,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/view.js",
+          "line": 4761,
+          "column": 32,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x1f."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/view.js",
+          "line": 4762,
+          "column": 28,
+          "message": "Unexpected control character(s) in regular expression: \\x00, \\x1f."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/view.js",
+          "line": 6231,
+          "column": 450,
+          "message": "Unexpected control character(s) in regular expression: \\x0a, \\x19."
+        }
+      ]
+    },
+    {
+      "rule": "prefer-destructuring",
+      "count": 17,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/acuity.js",
+          "line": 559,
+          "column": 13,
+          "message": "Use array destructuring."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/acuity.js",
+          "line": 560,
+          "column": 13,
+          "message": "Use array destructuring."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 13,
+          "column": 5,
+          "message": "Use array destructuring."
+        }
+      ]
+    },
+    {
+      "rule": "no-multi-assign",
+      "count": 16,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 19606,
+          "column": 23,
+          "message": "Unexpected chained assignment."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 19607,
+          "column": 22,
+          "message": "Unexpected chained assignment."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 19608,
+          "column": 23,
+          "message": "Unexpected chained assignment."
+        }
+      ]
+    },
+    {
+      "rule": "vars-on-top",
+      "count": 15,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 17,
+          "column": 5,
+          "message": "All 'var' declarations must be at the top of the function scope."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 18,
+          "column": 5,
+          "message": "All 'var' declarations must be at the top of the function scope."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 19,
+          "column": 10,
+          "message": "All 'var' declarations must be at the top of the function scope."
+        }
+      ]
+    },
+    {
+      "rule": "no-extend-native",
+      "count": 13,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/base.js",
+          "line": 34,
+          "column": 1,
+          "message": "BigInt prototype is read only, properties should not be added."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/base.js",
+          "line": 42,
+          "column": 5,
+          "message": "DataView prototype is read only, properties should not be added."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/base.js",
+          "line": 64,
+          "column": 5,
+          "message": "DataView prototype is read only, properties should not be added."
+        }
+      ]
+    },
+    {
+      "rule": "no-unused-vars",
+      "count": 6,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/acuity.js",
+          "line": 578,
+          "column": 46,
+          "message": "'params' is defined but never used."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/acuity.js",
+          "line": 581,
+          "column": 48,
+          "message": "'params' is defined but never used."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/acuity.js",
+          "line": 584,
+          "column": 32,
+          "message": "'inputs' is defined but never used."
+        }
+      ]
+    },
+    {
+      "rule": "no-use-before-define",
+      "count": 6,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 30,
+          "column": 45,
+          "message": "'errorHandler' was used before it was defined."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/keras.js",
+          "line": 112,
+          "column": 17,
+          "message": "'_load_container_state' was used before it was defined."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/mlnet.js",
+          "line": 88,
+          "column": 17,
+          "message": "'loadTransformer' was used before it was defined."
+        }
+      ]
+    },
+    {
+      "rule": "consistent-this",
+      "count": 6,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 10,
+          "column": 15,
+          "message": "Unexpected alias 'self' for 'this'."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 13258,
+          "column": 21,
+          "message": "Unexpected alias 'runner' for 'this'."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 13295,
+          "column": 23,
+          "message": "Unexpected alias 'self' for 'this'."
+        }
+      ]
+    },
+    {
+      "rule": "prefer-template",
+      "count": 4,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 16,
+          "column": 63,
+          "message": "Unexpected string concatenation."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 17,
+          "column": 15,
+          "message": "Unexpected string concatenation."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 21,
+          "column": 29,
+          "message": "Unexpected string concatenation."
+        }
+      ]
+    },
+    {
+      "rule": "prefer-arrow-callback",
+      "count": 4,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 59,
+          "column": 48,
+          "message": "Unexpected function expression."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 93,
+          "column": 34,
+          "message": "Unexpected function expression."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 98,
+          "column": 33,
+          "message": "Unexpected function expression."
+        }
+      ]
+    },
+    {
+      "rule": "no-constructor-return",
+      "count": 3,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 88,
+          "column": 25,
+          "message": "Unexpected return statement in constructor."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 93,
+          "column": 25,
+          "message": "Unexpected return statement in constructor."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 106,
+          "column": 21,
+          "message": "Unexpected return statement in constructor."
+        }
+      ]
+    },
+    {
+      "rule": "no-loop-func",
+      "count": 2,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/dagre.js",
+          "line": 1872,
+          "column": 35,
+          "message": "Function declared in a loop contains unsafe references to variable(s) 'north'."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/index.js",
+          "line": 59,
+          "column": 48,
+          "message": "Function declared in a loop contains unsafe references to variable(s) 'resolved'."
+        }
+      ]
+    },
+    {
+      "rule": "no-misleading-character-class",
+      "count": 2,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 1723,
+          "column": 65,
+          "message": "Unexpected combined character in character class."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 1723,
+          "column": 65,
+          "message": "Unexpected joined character sequence in character class."
+        }
+      ]
+    },
+    {
+      "rule": "no-undef-init",
+      "count": 2,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 10352,
+          "column": 21,
+          "message": "It's not necessary to initialize 'default_value' to undefined."
+        },
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 10373,
+          "column": 21,
+          "message": "It's not necessary to initialize 'value' to undefined."
+        }
+      ]
+    },
+    {
+      "rule": "no-undef",
+      "count": 1,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/desktop.mjs",
+          "line": 36,
+          "column": 65,
+          "message": "'__coverage__' is not defined."
+        }
+      ]
+    },
+    {
+      "rule": "no-negated-condition",
+      "count": 1,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/ncnn.js",
+          "line": 578,
+          "column": 24,
+          "message": "Unexpected negated condition."
+        }
+      ]
+    },
+    {
+      "rule": "guard-for-in",
+      "count": 1,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/python.js",
+          "line": 3969,
+          "column": 33,
+          "message": "The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype."
+        }
+      ]
+    },
+    {
+      "rule": "no-unused-expressions",
+      "count": 1,
+      "samples": [
+        {
+          "file": "/Users/andycyw/NoobNinja/source/view.js",
+          "line": 1906,
+          "column": 17,
+          "message": "Expected an assignment or function call and instead saw an expression."
+        }
+      ]
+    }
+  ]
+}

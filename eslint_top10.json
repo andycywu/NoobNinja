@@ -1,0 +1,45 @@
+{
+  "top10": [
+    {
+      "file": "/Users/andycyw/NoobNinja/source/explain/index.js",
+      "problems": 29
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/explain/test/cli-test.mjs",
+      "problems": 13
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/explain/llm-providers.js",
+      "problems": 10
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/explain/summarizer.js",
+      "problems": 10
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/explain/dummy-run.js",
+      "problems": 8
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/ui/explain-renderer.js",
+      "problems": 7
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/explain/rules.js",
+      "problems": 6
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/explain/test/basic-tests.js",
+      "problems": 5
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/explain/exporter.js",
+      "problems": 4
+    },
+    {
+      "file": "/Users/andycyw/NoobNinja/source/ui/settings.js",
+      "problems": 3
+    }
+  ],
+  "totalFiles": 128
+}
