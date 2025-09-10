@@ -50,6 +50,13 @@ view.View = class {
             this._element('zoom-out-button').addEventListener('click', () => {
                 this.zoomOut();
             });
+            // Fit-to-view button (NoobNinja requirement)
+            const fitButton = this._element('zoom-fit-button');
+            if (fitButton) {
+                fitButton.addEventListener('click', () => {
+                    this.resetZoom();
+                });
+            }
             this._element('toolbar-path-back-button').addEventListener('click', async () => {
                 await this.popTarget();
             });
